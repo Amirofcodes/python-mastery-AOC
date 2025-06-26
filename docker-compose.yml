@@ -1,0 +1,21 @@
+services:
+  dev:
+    build:
+      context: .
+      args:
+        PYTHON_VERSION: 3.13-slim
+        USER: dev
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    image: python-mastery:dev
+    command: tail -f /dev/null          # keep container alive for exec / VS Code attach
+    volumes:
+      - .:/home/dev/app:delegated       # edit either side
+      - pip_cache:/home/dev/.cache/pip
+    ports:
+      - "8000:8000"                     # free for future FastAPI
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      - PYTHONUNBUFFERED=1
+volumes:
+  pip_cache:

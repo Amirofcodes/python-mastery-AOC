@@ -1,0 +1,22 @@
+# ⬇ general Python ignores
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# ⬇ virtual-envs
+.venv/
+env/
+venv/
+
+# ⬇ editor / tooling
+.vscode/
+.idea/
+.ruff_cache/
+
+# ⬇ uv
+uv.lock
+
+# ⬇ git
+.git
