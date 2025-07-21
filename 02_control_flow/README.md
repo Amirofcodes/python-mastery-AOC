@@ -32,11 +32,67 @@ Master Python's decision-making and repetition constructs through targeted **mic
 
 ---
 
-## 2 · Mini‑Projects
+## 2 · Mini‑Projects (Start Here!)
 
-### **A. Enhanced Number Guessing Game** _(25 min target)_
+### **A. Smart Unit Converter CLI** _(35 min target)_
 
-**Goal:** Create an intelligent guessing game that adapts feedback and tracks statistics.
+**Goal:** Build a comprehensive converter using primitive types + control flow concepts.
+
+#### **Core Features**
+
+- **Interactive Menu**: Display conversion options using strings and print
+- **Input Validation**: Use conditionals to check valid menu choices (1-6)
+- **Conversion Logic**: Handle 5 conversion types with proper direction selection
+- **Loop Control**: Use `while True` with `break` for program flow
+- **Session Tracking**: Count conversions using primitive variables
+
+#### **Menu Structure**
+
+```
+🧮 Smart Converter v1.0
+========================
+1. Length (km ↔ miles)
+2. Temperature (°C ↔ °F)
+3. Weight (kg ↔ lb)
+4. Currency (EUR ↔ USD)
+5. Data (MB ↔ GB)
+6. Quit
+```
+
+#### **Technical Requirements**
+
+- **Only use**: Variables, strings, numbers, input/output, conditionals, loops
+- **No imports** except `random` for number generation
+- **Input validation**: Handle invalid choices with conditionals
+- **Formatted output**: Use f-strings for professional display
+
+#### **Conversion Formulas**
+
+```python
+# Length
+miles = km * 0.621371
+km = miles / 0.621371
+
+# Temperature
+fahrenheit = celsius * 9/5 + 32
+celsius = (fahrenheit - 32) * 5/9
+
+# Weight
+pounds = kg * 2.20462
+kg = pounds / 2.20462
+
+# Currency (example rate)
+usd = eur * 1.08
+eur = usd / 1.08
+
+# Data
+gb = mb / 1024
+mb = gb * 1024
+```
+
+### **B. Enhanced Number Guessing Game** _(25 min target)_
+
+**Goal:** Create an intelligent guessing game using control flow patterns.
 
 #### **Core Features**
 
@@ -46,13 +102,6 @@ Master Python's decision-making and repetition constructs through targeted **mic
 - Use `while` loop with attempt counter
 - `break` on correct guess, `while-else` for game over
 - Track: attempts used, best score, games played
-
-#### **Technical Requirements**
-
-- **Only use concepts learned so far**: variables, input/output, conditionals, loops
-- **No imports** except `random` for number generation
-- **Validation**: Handle non-numeric input gracefully
-- **Statistics**: Session tracking with primitive variables
 
 #### **Sample Game Flow**
 
@@ -72,44 +121,6 @@ Attempt 3/6: 13
 🎉 Correct! You won in 3 attempts!
 
 Play again? (y/n):
-```
-
-### **B. Simple ATM Simulator** _(30 min target)_
-
-**Goal:** Build a banking interface using nested loops and input validation.
-
-#### **Core Features**
-
-1. **PIN Protection**: 3 attempts using `for-else` pattern
-2. **Main Menu Loop**: Deposit, Withdraw, Balance, Exit
-3. **Transaction Validation**: No overdrafts, positive amounts only
-4. **Session Summary**: Total transactions, final balance
-
-#### **Technical Requirements**
-
-- **Nested control structures**: PIN loop inside main program loop
-- **Input validation**: Handle invalid menu choices and amounts
-- **Balance tracking**: Use single variable, update with each transaction
-- **Professional output**: Formatted currency display
-
-#### **Menu Structure**
-
-```
-🏦 Simple ATM v1.0
-==================
-Welcome! Please enter your PIN.
-
-PIN: ****
-✅ Access granted!
-
-1. Check Balance
-2. Deposit Money
-3. Withdraw Money
-4. Exit
-
-Choice: 2
-Enter deposit amount: €50.00
-✅ Deposited €50.00. New balance: €150.00
 ```
 
 ---
@@ -148,8 +159,8 @@ Enter deposit amount: €50.00
 
 **Project Mastery**:
 
+- [ ] Build Unit Converter CLI in **≤ 35 minutes**
 - [ ] Build Number Guessing Game in **≤ 25 minutes**
-- [ ] Build ATM Simulator in **≤ 30 minutes**
 - [ ] Both projects run without syntax errors
 
 **Concept Understanding**:
@@ -172,7 +183,7 @@ Enter deposit amount: €50.00
 
 - Your mini-projects have repeated code patterns
 - Next section will teach how to organize code into reusable functions
-- The ATM and Number Game will be refactored using functions
+- The CLI and Number Game will be refactored using functions
 
 ---
 

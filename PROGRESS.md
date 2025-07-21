@@ -2,25 +2,19 @@
 
 Log every finished drill, mini‑project, or section checkpoint here. Watching this table grow is part of the motivation!
 
-## 🎯 **Current Focus: 01_Primitive_Types**
+## �� **Current Focus: 02_Control_Flow**
 
-| Date (YYYY‑MM‑DD) | Section            | Item                             | Status | Commit Hash |
-| ----------------- | ------------------ | -------------------------------- | ------ | ----------- |
-| 2025‑01‑XX        | 01_Primitive_Types | Drills 1-9 (existing)            | ✅     | c9aa6d3     |
-|                   |                    | Drill 10: Email validation       | ⏳     | —           |
-|                   |                    | Drill 11: Variable naming        | —      | —           |
-|                   |                    | Drill 12: Number formatting      | —      | —           |
-|                   |                    | Drill 13: Name extraction        | —      | —           |
-|                   |                    | Drill 14: Temperature conv       | —      | —           |
-|                   |                    | Drill 15: Multi-line text        | —      | —           |
-|                   |                    | **Mini-Project**: Unit Converter | —      | —           |
+| Date (YYYY‑MM‑DD) | Section            | Item                    | Status | Commit Hash |
+| ----------------- | ------------------ | ----------------------- | ------ | ----------- |
+| 2025‑01‑XX        | 01_Primitive_Types | All 15 drills completed | ✅     | —           |
+|                   | 02_Control_Flow    | Drill 1: Age categories | ⏳     | —           |
 
 ## 📊 **Overall Progress**
 
 | Section               | Drills | Mini-Projects | Status |
 | --------------------- | ------ | ------------- | ------ |
-| 01_Primitive_Types    | 9/15   | 0/1           | ⏳     |
-| 02_Control_Flow       | 0/13   | 0/2           | —      |
+| 01_Primitive_Types    | 15/15  | 0/0           | ✅     |
+| 02_Control_Flow       | 0/13   | 0/2           | ⏳     |
 | 03_Functions          | 0/12   | 0/2           | —      |
 | 04_Data_Structures    | 0/23   | 0/3           | —      |
 | 05_Exceptions         | 0/7    | 0/1           | —      |
@@ -32,7 +26,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 9/147 drills (6%) • 0/26 mini-projects (0%)
+**Total Progress**: 15/147 drills (10%) • 0/25 mini-projects (0%)
 
 ---
 
@@ -45,7 +39,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 3. `git add` and commit with message: `feat: complete drill X - [concept]`
 4. Update the drill row: Status → ✅, add commit hash
 
-### **After Each Mini-Project**:
+### **After Each Mini-Project** (starting from Control Flow):
 
 1. Build the project following README specs
 2. Test all features work correctly
@@ -71,10 +65,10 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Complete remaining primitive types drills (10-15)
-**Next**: Build Unit Converter mini-project
-**After That**: Start Control Flow section
+**Current Priority**: Start Control Flow section (drills 1-13)
+**Next**: Build 2 mini-projects (Unit Converter + Number Game)
+**After That**: Move to Functions section
 
-> 💡 **Tip**: Commit each drill individually to track your daily progress and build momentum!
+> 💡 **Note**: Mini-projects start from Control Flow section where you can use conditionals and loops!
 
 Legend → ✅ complete ⏳ in progress — not started
