@@ -58,6 +58,11 @@ print(round(A, 2))
 # Drill 10: Boolean operators, string membership
 # Prompt: Validate email: check if it contains both @ and . using boolean operators
 
+email = input("enter your email: ").strip()
+is_valid = "@" in email and "." in email
+print(f"you email is valid: {is_valid}")
+
+
 # Drill 11: Variable names and Python conventions
 # Prompt: Create variables using snake_case and camelCase, test which Python prefers
 
