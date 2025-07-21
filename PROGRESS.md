@@ -1,26 +1,80 @@
-# 📈 Progress Tracker
+# 📈 Progress Tracker
 
 Log every finished drill, mini‑project, or section checkpoint here. Watching this table grow is part of the motivation!
 
-| Date (YYYY‑MM‑DD) | Section → Folder       | Item (drill / project)    | Status | Commit / Tag |
-| ----------------- | ---------------------- | ------------------------- | ------ | ------------ |
-| 2025‑06‑27        | Primitive Types `01_…` | micro‑drill #1            | ⏳     | —            |
-|                   |                        | Unit & Currency Converter | —      | —            |
-|                   |                        |                           |        |              |
+## 🎯 **Current Focus: 01_Primitive_Types**
 
-Legend → ✅ complete ⏳ in progress — not started
+| Date (YYYY‑MM‑DD) | Section            | Item                             | Status | Commit Hash |
+| ----------------- | ------------------ | -------------------------------- | ------ | ----------- |
+| 2025‑01‑XX        | 01_Primitive_Types | Drills 1-9 (existing)            | ✅     | c9aa6d3     |
+|                   |                    | Drill 10: Email validation       | ⏳     | —           |
+|                   |                    | Drill 11: Variable naming        | —      | —           |
+|                   |                    | Drill 12: Number formatting      | —      | —           |
+|                   |                    | Drill 13: Name extraction        | —      | —           |
+|                   |                    | Drill 14: Temperature conv       | —      | —           |
+|                   |                    | Drill 15: Multi-line text        | —      | —           |
+|                   |                    | **Mini-Project**: Unit Converter | —      | —           |
+
+## 📊 **Overall Progress**
+
+| Section               | Drills | Mini-Projects | Status |
+| --------------------- | ------ | ------------- | ------ |
+| 01_Primitive_Types    | 9/15   | 0/1           | ⏳     |
+| 02_Control_Flow       | 0/13   | 0/2           | —      |
+| 03_Functions          | 0/12   | 0/2           | —      |
+| 04_Data_Structures    | 0/23   | 0/3           | —      |
+| 05_Exceptions         | 0/7    | 0/1           | —      |
+| 06_Classes_OOP        | 0/22   | 0/3           | —      |
+| 07_Modules            | 0/8    | 0/2           | —      |
+| 08_Standard_Library   | 0/17   | 0/4           | —      |
+| 09_Package_Management | 0/10   | 0/2           | —      |
+| 10_Popular_Packages   | 0/12   | 0/3           | —      |
+| 11_Web_APIs           | 0/8    | 0/2           | —      |
+| 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
+
+**Total Progress**: 9/147 drills (6%) • 0/26 mini-projects (0%)
 
 ---
 
-## How to update
+## 📝 **How to Update**
 
-1. Finish a drill or mini‑project.
-2. `git add <file.py>` and commit **before** editing this table.
-3. Edit the matching row:
+### **After Each Drill**:
 
-   - **Status** → ⏳ ➜ ✅
-   - **Commit / Tag** → paste the short hash or Git tag.
+1. Complete the drill in `drills.py`
+2. Test your solution works
+3. `git add` and commit with message: `feat: complete drill X - [concept]`
+4. Update the drill row: Status → ✅, add commit hash
 
-4. `git add PROGRESS.md` ➜ commit (`docs: update progress`).
+### **After Each Mini-Project**:
 
-> Keeping PROGRESS.md separate from the high‑level course outline stops clutter and gives you a linear journal of achievements.
+1. Build the project following README specs
+2. Test all features work correctly
+3. `git add` and commit with message: `feat: complete [project name] mini-project`
+4. Update the mini-project row: Status → ✅, add commit hash
+
+### **After Each Section**:
+
+1. Verify all drills and projects are complete
+2. Update section status in course outline
+3. Commit progress update: `docs: complete section X - [name]`
+
+---
+
+## 🏆 **Milestones**
+
+- [ ] **Foundation Complete**: Sections 1-2 (Primitive Types + Control Flow)
+- [ ] **Structure Mastery**: Sections 3-4 (Functions + Data Structures)
+- [ ] **Robustness**: Sections 5-6 (Exceptions + Classes)
+- [ ] **Integration**: Sections 7-12 (Modules → Webapp)
+
+---
+
+## 🎯 **Next Steps**
+
+**Current Priority**: Complete remaining primitive types drills (10-15)
+**Next**: Build Unit Converter mini-project
+**After That**: Start Control Flow section
+
+> 💡 **Tip**: Commit each drill individually to track your daily progress and build momentum!
+
+Legend → ✅ complete ⏳ in progress — not started
