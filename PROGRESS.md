@@ -7,14 +7,14 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | Date (YYYY‑MM‑DD) | Section            | Item                    | Status | Commit Hash |
 | ----------------- | ------------------ | ----------------------- | ------ | ----------- |
 | 2025‑01‑XX        | 01_Primitive_Types | All 15 drills completed | ✅     | —           |
-|                   | 02_Control_Flow    | Drill 1: Age categories | ⏳     | —           |
+| 2025‑01‑XX        | 02_Control_Flow    | All 13 drills completed | ✅     | —           |
 
 ## 📊 **Overall Progress**
 
 | Section               | Drills | Mini-Projects | Status |
 | --------------------- | ------ | ------------- | ------ |
 | 01_Primitive_Types    | 15/15  | 0/0           | ✅     |
-| 02_Control_Flow       | 0/13   | 0/2           | ⏳     |
+| 02_Control_Flow       | 13/13  | 0/2           | ✅     |
 | 03_Functions          | 0/12   | 0/2           | —      |
 | 04_Data_Structures    | 0/23   | 0/3           | —      |
 | 05_Exceptions         | 0/7    | 0/1           | —      |
@@ -26,7 +26,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 15/147 drills (10%) • 0/25 mini-projects (0%)
+**Total Progress**: 28/147 drills (19%) • 0/25 mini-projects (0%)
 
 ---
 
@@ -65,9 +65,9 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Start Control Flow section (drills 1-13)
-**Next**: Build 2 mini-projects (Unit Converter + Number Game)
-**After That**: Move to Functions section
+**Current Priority**: Build Control Flow mini-projects (Unit Converter + Number Game)
+**Next**: Move to Functions section (drills 1-12)
+**After That**: Data Structures section
 
 > 💡 **Note**: Mini-projects start from Control Flow section where you can use conditionals and loops!
 

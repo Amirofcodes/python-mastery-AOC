@@ -1,100 +1,119 @@
-# 01_primitive_types - Micro-drills for Variables, Strings, Numbers, Type Conversion
+# 01_primitive_types - Micro-drills for Variables, Strings, Numbers, and Type Conversion
 #
-# Instructions: Complete each drill by typing the solution yourself.
-# Don't copy-paste! The goal is to build muscle memory.
+# Instructions:
+# Complete each drill by typing the solution yourself to build muscle memory.
+# Only use the core concepts listed for each drill.
+# No control flow (if/else, loops, etc.) unless the prompt says otherwise.
 
-# ===== YOUR COMPLETED DRILLS (1-12) =====
+# ===== DRILLS TO COMPLETE (1-15) =====
 
-# Drill 1: Variables and F-strings
-# Prompt: Create city, country, population variables; print: "Paris, France has 2.15 million people."
-city = "Paris"
-country = "France"
-population = 2.15
-print(f"{city}, {country} has {population} million people")
+# Drill 1: Variables, F-strings
+# Prompt: Create variables for city, country, and population (in millions).
+# Print: "<city>, <country> has <population> million people." using an f-string.
+city = "Casablanca"
+country = "Morocco"
+population = 8.5
+
+print(f"{city}, {country} has {population} million people.")
 
 # Drill 2: String methods, slicing, len(), upper()
-# Prompt: Given quote = "Talk is cheap. Show me the code.", print its length and last word in UPPERCASE
+# Prompt: Given quote = "Talk is cheap. Show me the code.",
+# print its total number of characters and the last word in uppercase (using slicing).
 quote = "Talk is cheap. Show me the code."
 print(
-    f"quote has {len(quote)} Characters, and the last word is {str.upper(quote[-5: -1])} ")
+    f"The quote length is {len(quote)} and the last word is {quote[-5:-1].upper()}")
 
 # Drill 3: input(), type conversion, arithmetic
-# Prompt: Ask user's birth year, calculate age in months. Handle string → int conversion
-birth_year = int(input("enter your birth year: "))
-age_in_months = birth_year * 12
-print(f"you are {age_in_months} months old")
+# Prompt: Ask the user for their birth year (as input).
+# Calculate and print their age in months. (Assume current year is 2025.)
+birth_year = int(input("Enter your birth year: "))
+print(f"Your age in months: {(2025 - birth_year) * 12}")
 
 # Drill 4: String methods - strip(), replace(), len()
-# Prompt: Clean password = " P@ssw0rd! ": strip spaces, replace @ → a, count final characters
+# Prompt: Given password = " P@ssw0rd! ",
+# - Strip leading and trailing spaces.
+# - Replace '@' with 'a'.
+# - Print the cleaned password and its length.
 password = " P@ssw0rd! "
-clean_password = password.strip()
-alt_password = clean_password.replace("@", "a")
-print(
-    f"after stripping we get: {clean_password}, then we replace the @ to get: {alt_password}, with {len(alt_password)} Characters.")
+clean_pass = password.strip()
+correct_pass = clean_pass.replace("@", "a")
+print(f"Cleaned password: {correct_pass}")
+print(f"Length: {len(correct_pass)}")
 
 # Drill 5: Numbers - round(), int() casting
-# Prompt: For pi = 3.14159, print it rounded to 2 decimals and as an integer
+# Prompt: Given pi = 3.14159,
+# - Print pi rounded to 2 decimal places (multiple ways allowed).
+# - Print pi converted to an integer.
 pi = 3.14159
-pi1 = int(pi)
-pi2 = pi.__round__(2)
-print(
-    f"pi rounded to 2 decimals is: {pi2}, and type casted to an interger is: {pi1}")
+# Method 1: Using round() function
+print(f"Rounded (round): {round(pi, 2)}")
+# Method 2: Using f-string formatting
+print(f"Rounded (f-string): {pi:.2f}")
+# Method 3: Using __round__ method
+print(f"Rounded (__round__): {pi.__round__(2)}")
+# Convert to integer
+print(f"Integer: {int(pi)}")
 
 # Drill 6: Escape sequences
-# Prompt: Create a sentence spanning 3 lines using \n. Then print it
-sentence = "this sentence spans \nthree lines \nby the power of the escape sequences"
-print(sentence)
+# Prompt: Create a string that spans three lines using \n escape sequences.
+# Print the string.
+long_quote = "This long quote \ncan be displayed \nin 3 lines"
+print(long_quote)
 
 # Drill 7: Multiple assignment, variable names
-# Prompt: Swap two numbers without a temp variable using Python's multiple assignment
+# Prompt: Initialize a = 10 and b = 5.
+# Swap their values using multiple assignment (no temp variable).
+# Print both variables after swapping.
 a = 10
 b = 5
 a, b = b, a
-print(a)
-print(b)
+print(f"After swap: a = {a}, b = {b}")
 
 # Drill 8: String slicing, rfind() method
-# Prompt: Ask for file path, extract and print only the extension (e.g., .png)
-path = input("inter file path: ").strip()
-dot = path.rfind(".")
-extention = path[dot:]
-print(f"your file extention is: {extention}")
+# Prompt: Ask the user to input a file path (e.g., "picture.png").
+# Use rfind() and slicing to extract and print the file extension.
+file_path = input("Enter file path: ")
+dot = file_path.rfind(".")
+print(f"File extension: {file_path[dot:]}")
 
-# Drill 9: Working with numbers - ** operator
-# Prompt: Calculate compound interest: €100 at 4% for 5 years using formula A = P(1+r)^n
+# Drill 9: Numbers - ** operator, arithmetic
+# Prompt: Calculate compound interest: P=100, r=0.04, n=5.
+# Use the formula: A = P * (1 + r) ** n.
+# Print the final result rounded to 2 decimal places.
 P = 100
 r = 0.04
 n = 5
 
 A = P * (1 + r) ** n
-print(round(A, 2))
-
-# ===== DRILLS TO COMPLETE (10-15) =====
-# TODO: Implement these yourself following the README prompts
+print(f"Compound interest result: {A:.2f}")
 
 # Drill 10: Boolean operators, string membership
-# Prompt: Validate email: check if it contains both @ and . using boolean operators
-
-email = input("enter your email: ").strip()
+# Prompt: Ask the user for an email address.
+# Check if it contains both "@" and "." (using boolean operators).
+# Print whether it's "Valid" or "Invalid".
+email = input("Enter your email: ")
 is_valid = "@" in email and "." in email
-print(f"you email is valid: {is_valid}")
+print(f"Email valid: {is_valid}")
 
-# Drill 11: Variable names and Python conventions
-# Prompt: Create variables using snake_case and camelCase, test which Python prefers
+# Drill 11: Variable naming conventions
+# Prompt: Create and print variables using both snake_case and camelCase naming styles.
+# Note which style is preferred in Python (comment in your code).
 snake_case_variable = "I follow Python convention"
 camelCaseVariable = "I work but I'm not Pythonic"
 
-print(snake_case_variable)  # Works fine
-print(camelCaseVariable)    # Also works fine
+print(snake_case_variable)  # Python prefers this style
+print(camelCaseVariable)    # Works but not conventional in Python
 
 # Drill 12: Formatted strings, number formatting
-# Prompt: Format 1234567.89 with thousands separators and 2 decimal places
-big_number = 1234567.89456
-formatted = f"{big_number:,.2f}"
-print(formatted)  # Output: 1,234,567.89
+# Prompt: Format 1234567.89 with thousands separators and 2 decimal places using an f-string.
+# Print the formatted result.
+big_number = 1234567.89
+print(f"Formatted number: {big_number:,.2f}")
 
 # Drill 13: String methods - find(), slicing
-# Prompt: Extract first and last name from "John Doe" using string methods (no split)
+# Prompt: Given full_name = "John Doe",
+# - Use find() and slicing to extract the first and last name (no split()).
+# - Print them separately.
 full_name = "John Doe"
 space_pos = full_name.find(" ")
 first_name = full_name[:space_pos]
@@ -103,16 +122,22 @@ print(f"First name: {first_name}")
 print(f"Last name: {last_name}")
 
 # Drill 14: Type conversion, arithmetic, f-strings
-# Prompt: Convert Celsius to Fahrenheit with formula F = C × 9/5 + 32
+# Prompt: Ask the user for a temperature in Celsius (float input).
+# Convert it to Fahrenheit using the formula F = C × 9/5 + 32.
+# Print the result to 1 decimal place using an f-string.
 celsius = float(input("Enter temperature in Celsius: "))
 fahrenheit = celsius * 9/5 + 32
 print(f"{celsius}°C = {fahrenheit:.1f}°F")
 
 # Drill 15: Multi-line strings, string methods
-# Prompt: Create multi-line string with triple quotes, count total words
+# Prompt: Create a multi-line string using triple quotes.
+# Count and print the total number of words (use split() and len()).
+# Also print the original multi-line string.
 multi_line = """This is a multi-line string
 that spans several lines
 and demonstrates triple quotes."""
 word_count = len(multi_line.split())
 print(f"Multi-line string:\n{multi_line}")
 print(f"Total words: {word_count}")
+
+# ===== END OF DRILLS =====
