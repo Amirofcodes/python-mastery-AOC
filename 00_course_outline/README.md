@@ -16,8 +16,8 @@ A comprehensive, progressive learning path for Python mastery. Each section buil
 | #   | Section                                   | Status         | Drills | Mini-Projects | Key Concepts                                    |
 | --- | ----------------------------------------- | -------------- | ------ | ------------- | ----------------------------------------------- |
 | 01  | [Primitive Types](../01_primitive_types/) | ✅ complete    | 15     | 0             | variables · strings · numbers · type conversion |
-| 02  | [Control Flow](../02_control_flow/)       | ⏳ in progress | 13     | 2             | conditionals · loops · logical operators        |
-| 03  | [Functions](../03_functions/)             | —              | 12     | 2             | defining · arguments · scope · debugging        |
+| 02  | [Control Flow](../02_control_flow/)       | ✅ complete    | 13     | 2             | conditionals · loops · logical operators        |
+| 03  | [Functions](../03_functions/)             | ⏳ in progress | 12     | 2             | defining · arguments · scope · debugging        |
 | 04  | [Data Structures](../04_data_structures/) | —              | 23     | 3             | lists · dicts · sets · comprehensions           |
 | 05  | [Exceptions](../05_exceptions/)           | —              | 7      | 1             | try/except · custom exceptions                  |
 | 06  | [Classes & OOP](../06_classes/)           | —              | 22     | 3             | classes · inheritance · polymorphism            |
@@ -100,4 +100,4 @@ Before moving to the next section:
 
 ---
 
-**🎉 Primitive Types Complete! Ready for Control Flow! 🧠**
+**🎉 Control Flow Complete! Ready for Functions! ⚙️**

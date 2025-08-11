@@ -2,7 +2,7 @@
 
 Log every finished drill, mini‑project, or section checkpoint here. Watching this table grow is part of the motivation!
 
-## �� **Current Focus: 02_Control_Flow**
+## 🧠 **Current Focus: 04_Data_Structures**
 
 | Date (YYYY‑MM‑DD) | Section            | Item                    | Status | Commit Hash |
 | ----------------- | ------------------ | ----------------------- | ------ | ----------- |
@@ -14,8 +14,8 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | Section               | Drills | Mini-Projects | Status |
 | --------------------- | ------ | ------------- | ------ |
 | 01_Primitive_Types    | 15/15  | 0/0           | ✅     |
-| 02_Control_Flow       | 13/13  | 0/2           | ✅     |
-| 03_Functions          | 0/12   | 0/2           | —      |
+| 02_Control_Flow       | 13/13  | 1/2           | ⏳     |
+| 03_Functions          | 12/12  | 0/2           | ⏳     |
 | 04_Data_Structures    | 0/23   | 0/3           | —      |
 | 05_Exceptions         | 0/7    | 0/1           | —      |
 | 06_Classes_OOP        | 0/22   | 0/3           | —      |
@@ -26,7 +26,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 28/147 drills (19%) • 0/25 mini-projects (0%)
+**Total Progress**: 28/147 drills (19%) • 1/25 mini-projects (4%)
 
 ---
 
@@ -65,9 +65,9 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Build Control Flow mini-projects (Unit Converter + Number Game)
-**Next**: Move to Functions section (drills 1-12)
-**After That**: Data Structures section
+**Current Priority**: Start Data Structures (read notes, then drills 1-23)
+**Next**: Functions mini-projects (Advanced Calculator, Password Toolkit)
+**After That**: Continue with Exceptions section
 
 > 💡 **Note**: Mini-projects start from Control Flow section where you can use conditionals and loops!
 
