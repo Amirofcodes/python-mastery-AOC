@@ -32,100 +32,7 @@ Master Python's decision-making and repetition constructs through targeted **mic
 
 ---
 
-## 2 · Mini‑Projects (Start Here!)
-
-### **A. Smart Unit Converter CLI** _(35 min target)_
-
-**Goal:** Build a comprehensive converter using primitive types + control flow concepts.
-
-#### **Core Features**
-
-- **Interactive Menu**: Display conversion options using strings and print
-- **Input Validation**: Use conditionals to check valid menu choices (1-6)
-- **Conversion Logic**: Handle 5 conversion types with proper direction selection
-- **Loop Control**: Use `while True` with `break` for program flow
-- **Session Tracking**: Count conversions using primitive variables
-
-#### **Menu Structure**
-
-```
-🧮 Smart Converter v1.0
-========================
-1. Length (km ↔ miles)
-2. Temperature (°C ↔ °F)
-3. Weight (kg ↔ lb)
-4. Currency (EUR ↔ USD)
-5. Data (MB ↔ GB)
-6. Quit
-```
-
-#### **Technical Requirements**
-
-- **Only use**: Variables, strings, numbers, input/output, conditionals, loops
-- **No imports** except `random` for number generation
-- **Input validation**: Handle invalid choices with conditionals
-- **Formatted output**: Use f-strings for professional display
-
-#### **Conversion Formulas**
-
-```python
-# Length
-miles = km * 0.621371
-km = miles / 0.621371
-
-# Temperature
-fahrenheit = celsius * 9/5 + 32
-celsius = (fahrenheit - 32) * 5/9
-
-# Weight
-pounds = kg * 2.20462
-kg = pounds / 2.20462
-
-# Currency (example rate)
-usd = eur * 1.08
-eur = usd / 1.08
-
-# Data
-gb = mb / 1024
-mb = gb * 1024
-```
-
-### **B. Enhanced Number Guessing Game** _(25 min target)_
-
-**Goal:** Create an intelligent guessing game using control flow patterns.
-
-#### **Core Features**
-
-- Computer picks random number 1-20
-- Player has **6 attempts maximum**
-- Provide "higher/lower" hints after each guess
-- Use `while` loop with attempt counter
-- `break` on correct guess, `while-else` for game over
-- Track: attempts used, best score, games played
-
-#### **Sample Game Flow**
-
-```
-🎯 Number Guessing Game v2.0
-============================
-I'm thinking of a number between 1 and 20...
-You have 6 attempts. Good luck!
-
-Attempt 1/6: 10
-📈 Higher!
-
-Attempt 2/6: 15
-📉 Lower!
-
-Attempt 3/6: 13
-🎉 Correct! You won in 3 attempts!
-
-Play again? (y/n):
-```
-
----
-
-## 3 · Advanced Practice Challenges
+## 2 · Advanced Practice Challenges
 
 ### **Stretch Goals** (Optional)
 
@@ -147,7 +54,7 @@ Play again? (y/n):
 
 ---
 
-## 4 · Mastery Checkpoints
+## 3 · Mastery Checkpoints
 
 ### **Before Moving to Functions**
 
@@ -177,7 +84,7 @@ Play again? (y/n):
 
 ---
 
-## 5 · Integration with Next Section
+## 4 · Integration with Next Section
 
 **Functions Preview** (Don't implement yet!):
 

@@ -31,127 +31,7 @@ Master Python's code organization through focused **micro‑drills** that build 
 
 ---
 
-## 2 · Mini‑Projects (Build Your Function Library!)
-
-### **A. Advanced Calculator CLI** _(40 min target)_
-
-**Goal:** Refactor your previous calculator knowledge into a function-based system.
-
-#### **Core Features**
-
-- **Function Library**: Create separate functions for each operation
-- **Menu System**: Use functions to display menus and handle choices
-- **Input Validation**: Dedicated functions for safe number input
-- **History Tracking**: Function-based session management
-- **Error Handling**: Consistent error reporting across functions
-
-#### **Required Functions**
-
-```python
-# Core calculation functions
-def add(a, b): return a + b
-def subtract(a, b): return a - b
-def multiply(a, b): return a * b
-def divide(a, b): # Handle division by zero
-
-# Utility functions
-def get_number(prompt): # Get valid number from user
-def display_menu(): # Show operation choices
-def get_operation_choice(): # Get valid menu choice
-def format_result(result): # Format numbers nicely
-
-# Main program functions
-def run_calculator(): # Main program loop
-def display_history(calculations): # Show past calculations
-```
-
-#### **Sample Interaction**
-
-```
-🧮 Advanced Calculator v2.0
-============================
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. View History
-6. Quit
-
-Enter choice (1-6): 1
-Enter first number: 15.5
-Enter second number: 7.2
-Result: 15.5 + 7.2 = 22.7
-
-Calculations performed: 1
-Continue? (y/n): y
-```
-
-#### **Technical Requirements**
-
-- **Pure Functions**: Math operations should be pure (same input → same output)
-- **Input Validation**: Separate functions for getting valid numbers and choices
-- **Error Handling**: Functions should return error messages, not crash
-- **Code Organization**: Group related functions together
-- **No Global Variables**: Pass data between functions as parameters
-
-### **B. Password Generator & Validator** _(30 min target)_
-
-**Goal:** Build a security toolkit using function composition.
-
-#### **Core Features**
-
-- **Password Generation**: Functions to create passwords with different criteria
-- **Password Validation**: Functions to check password strength
-- **Batch Processing**: Generate multiple passwords at once
-- **Customization**: User-configurable password requirements
-
-#### **Required Functions**
-
-```python
-# Generation functions
-def generate_simple_password(length=8): # Numbers and letters only
-def generate_secure_password(length=12): # Include special characters
-def generate_memorable_password(): # Word-based passwords
-
-# Validation functions
-def check_length(password, min_length=8): # Length validation
-def check_complexity(password): # Has numbers, letters, symbols
-def validate_password(password): # Overall strength score
-
-# Utility functions
-def get_password_requirements(): # Get user preferences
-def display_password_strength(score): # Show strength meter
-def batch_generate(count, generator_func): # Generate multiple passwords
-```
-
-#### **Sample Interaction**
-
-```
-🔐 Password Security Toolkit v1.0
-==================================
-1. Generate Simple Password
-2. Generate Secure Password
-3. Generate Memorable Password
-4. Validate Existing Password
-5. Batch Generate (10 passwords)
-6. Quit
-
-Enter choice: 1
-Password length (8-50): 12
-Generated: aB3kL9mN2pQ7
-
-Validation Results:
-✅ Length: 12 characters (Strong)
-✅ Complexity: Mixed case, numbers
-❌ Special characters: None found
-Overall Strength: 7/10 (Good)
-
-Generate another? (y/n):
-```
-
----
-
-## 3 · Advanced Practice Challenges
+## 2 · Advanced Practice Challenges
 
 ### **Stretch Goals** (Optional)
 
@@ -175,7 +55,7 @@ Generate another? (y/n):
 
 ---
 
-## 4 · Mastery Checkpoints
+## 3 · Mastery Checkpoints
 
 ### **Before Moving to Data Structures**
 
@@ -209,7 +89,7 @@ Generate another? (y/n):
 
 ---
 
-## 5 · Integration with Next Section
+## 4 · Integration with Next Section
 
 **Data Structures Preview** (Don't implement yet!):
 
