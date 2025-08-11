@@ -9,13 +9,14 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 2025‑01‑XX        | 01_Primitive_Types | All 15 drills completed | ✅     | —           |
 | 2025‑01‑XX        | 02_Control_Flow    | All 13 drills completed | ✅     | —           |
 | 2025‑01‑XX        | 03_Functions       | Drills 1‑12 completed   | ✅     | —           |
+| 2025‑01‑XX        | 02_Control_Flow    | Number Guessing v1      | ✅     | 611d415     |
 
 ## 📊 **Overall Progress**
 
 | Section               | Drills | Mini-Projects | Status |
 | --------------------- | ------ | ------------- | ------ |
 | 01_Primitive_Types    | 15/15  | 0/0           | ✅     |
-| 02_Control_Flow       | 13/13  | 1/2           | ⏳     |
+| 02_Control_Flow       | 13/13  | 2/2           | ✅     |
 | 03_Functions          | 12/12  | 0/2           | ⏳     |
 | 04_Data_Structures    | 0/23   | 0/3           | —      |
 | 05_Exceptions         | 0/7    | 0/1           | —      |
@@ -27,7 +28,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 40/147 drills (27%) • 1/25 mini-projects (4%)
+**Total Progress**: 40/147 drills (27%) • 2/25 mini-projects (8%)
 
 ---
 
