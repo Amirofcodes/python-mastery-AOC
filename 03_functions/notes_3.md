@@ -291,7 +291,7 @@ print(f"Final counter: {counter}")  # Final counter: 2
 def outer_function(x):
     def inner_function(y):
         return x + y
-    
+
     return inner_function(10)
 
 result = outer_function(5)
@@ -406,13 +406,13 @@ print(max_val(10, 5))  # Output: 10
 ```python
 def calculate_compound_interest(principal, rate, time):
     print(f"DEBUG: principal={principal}, rate={rate}, time={time}")
-    
+
     amount = principal
     for year in range(time):
         interest = amount * rate
         amount += interest
         print(f"DEBUG: Year {year + 1}, Interest={interest:.2f}, Amount={amount:.2f}")
-    
+
     return amount
 
 result = calculate_compound_interest(1000, 0.05, 3)
@@ -436,6 +436,50 @@ if not is_valid:
 else:
     print("Input is valid")
 ```
+
+---
+
+# RUNNING SCRIPTS SAFELY (THE MAIN GUARD)
+
+# Use a guard to prevent top-level code from running on import
+
+```python
+def run_converter():
+    print("Running the converter loop...")
+    # ... main loop here ...
+
+
+if __name__ == "__main__":
+    # This block runs ONLY when the file is executed directly:
+    # python unit_converter_v2.py
+    run_converter()
+```
+
+# Why this matters
+
+- When Python loads a file, it sets a built-in variable `__name__`.
+- If the file is executed directly, `__name__ == "__main__"`.
+- If the file is imported from another file, `__name__` becomes the module name, so the guarded block does NOT run.
+- This lets you keep reusable functions importable without triggering the script’s CLI logic.
+
+# Quick check
+
+```python
+print("Module name:", __name__)
+
+def add(a, b):
+    return a + b
+
+if __name__ == "__main__":
+    # Runs only when this file is executed directly
+    print(add(2, 3))
+```
+
+# Mini‑drill
+
+1. Add `print("Module:", __name__)` near the top of a script and run it with `python your_file.py`.
+2. Observe it prints `__main__`.
+3. Create another file and `import your_file`; observe the printed module name is `your_file` and the guarded block does not run.
 
 ---
 
@@ -500,11 +544,13 @@ print(multiplier(4, 6)) # Output: 24
 # KEY CONCEPTS SUMMARY
 
 ## Function Definition
+
 - `def function_name(parameters):` - Define a function
 - `return value` - Return a value from function
 - Function names should be verbs in snake_case
 
 ## Parameters and Arguments
+
 - **Positional arguments** - Order matters
 - **Keyword arguments** - Named parameters
 - **Default parameters** - Optional with default values
@@ -512,18 +558,21 @@ print(multiplier(4, 6)) # Output: 24
 - **\*\*kwargs** - Variable number of keyword arguments
 
 ## Scope
+
 - **Local scope** - Variables inside function
 - **Global scope** - Variables outside all functions
 - **global keyword** - Modify global variables inside functions
 - **Variable shadowing** - Local variables hide global ones
 
 ## Function Types
+
 - **Pure functions** - No side effects, same input → same output
 - **Functions with side effects** - Modify global state or print
 - **Higher-order functions** - Take functions as parameters
 - **Lambda functions** - Anonymous functions for simple operations
 
 ## Best Practices
+
 - Functions should do one thing well
 - Use descriptive names for functions and parameters
 - Keep functions small and focused
@@ -533,6 +582,7 @@ print(multiplier(4, 6)) # Output: 24
 - Avoid mutable default arguments
 
 ## Common Patterns
+
 - Input validation with error handling
 - Configuration functions with defaults
 - Factory functions that create other functions
@@ -541,6 +591,7 @@ print(multiplier(4, 6)) # Output: 24
 - Side-effect functions for I/O operations
 
 ## Debugging
+
 - Use print statements to trace execution
 - Return error codes and messages
 - Test functions with different inputs
