@@ -90,5 +90,3 @@ Target file: `Mini-Projects/unit_converter_v2.py`
 3. Replace loops/filters with comprehensions where it improves clarity (from section 04)
 4. Keep CLI interaction simple; formatting via f‑strings
 5. Save as new versioned file and update this README
-
-

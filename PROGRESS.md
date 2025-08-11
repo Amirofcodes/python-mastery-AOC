@@ -8,6 +8,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | ----------------- | ------------------ | ----------------------- | ------ | ----------- |
 | 2025‑01‑XX        | 01_Primitive_Types | All 15 drills completed | ✅     | —           |
 | 2025‑01‑XX        | 02_Control_Flow    | All 13 drills completed | ✅     | —           |
+| 2025‑01‑XX        | 03_Functions       | Drills 1‑12 completed   | ✅     | —           |
 
 ## 📊 **Overall Progress**
 
@@ -26,7 +27,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 28/147 drills (19%) • 1/25 mini-projects (4%)
+**Total Progress**: 40/147 drills (27%) • 1/25 mini-projects (4%)
 
 ---
 
@@ -56,7 +57,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🏆 **Milestones**
 
-- [ ] **Foundation Complete**: Sections 1-2 (Primitive Types + Control Flow)
+- [x] **Foundation Complete**: Sections 1-2 (Primitive Types + Control Flow)
 - [ ] **Structure Mastery**: Sections 3-4 (Functions + Data Structures)
 - [ ] **Robustness**: Sections 5-6 (Exceptions + Classes)
 - [ ] **Integration**: Sections 7-12 (Modules → Webapp)
