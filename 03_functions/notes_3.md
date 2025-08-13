@@ -597,3 +597,27 @@ print(multiplier(4, 6)) # Output: 24
 - Test functions with different inputs
 - Use meaningful variable names
 - Break complex functions into smaller ones
+
+---
+
+# TYPE HINTS (PREVIEW)
+
+- What: optional annotations that describe parameter and return types. Example: `def add(a: float, b: float) -> float:`
+- Why: improves readability, editor help, and static analysis. Python ignores hints at runtime (no behavior change).
+- When: keep v1 solutions without hints if you prefer; we’ll start using hints more after Exceptions and Data Structures.
+
+```python
+# Parameters and return types
+def add(a: float, b: float) -> float:
+    return a + b
+
+# Default values + simple bools and strings
+def greeting(name: str, excited: bool = False) -> str:
+    suffix = "!" if excited else "."
+    return f"Hello, {name}{suffix}"
+```
+
+Mini‑drill (2–3 min)
+
+1. Add type hints to `calculate_area(length, width)` and `safe_divide(a, b)` in your code.
+2. Run the file normally. Notice everything still works; hints are for tools and humans.
