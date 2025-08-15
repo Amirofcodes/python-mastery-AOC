@@ -17,8 +17,8 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | --------------------- | ------ | ------------- | ------ |
 | 01_Primitive_Types    | 15/15  | 0/0           | ✅     |
 | 02_Control_Flow       | 13/13  | 2/2           | ✅     |
-| 03_Functions          | 12/12  | 0/2           | ⏳     |
-| 04_Data_Structures    | 0/23   | 0/3           | —      |
+| 03_Functions          | 12/12  | 2/2           | ✅     |
+| 04_Data_Structures    | 6/23   | 0/3           | ⏳     |
 | 05_Exceptions         | 0/7    | 0/1           | —      |
 | 06_Classes_OOP        | 0/22   | 0/3           | —      |
 | 07_Modules            | 0/8    | 0/2           | —      |
@@ -28,7 +28,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 40/147 drills (27%) • 2/25 mini-projects (8%)
+**Total Progress**: 46/147 drills (31%) • 4/25 mini-projects (16%)
 
 ---
 
@@ -67,7 +67,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Start Data Structures (read notes, then drills 1-23)
+**Current Priority**: Continue Data Structures (drills 7-23, currently 6/23 complete)
 **Next**: Functions mini-projects (Advanced Calculator, Password Toolkit)
 **After That**: Continue with Exceptions section
 

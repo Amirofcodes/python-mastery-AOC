@@ -11,36 +11,71 @@
 # Prompt: Create a list letters = ["a", "b", "c"].
 # Print the length, the first item, and the last item.
 # TODO: implement
+letters = ["a", "b", "c"]
 
+print(
+    f"'letters' is a list with {len(letters)} items: '{letters[0]}' first, '{letters[-1]}' last")
 
 # Drill 2: Indexing and slicing
 # Prompt: Given nums = [10, 20, 30, 40, 50],
 # print the second item and the last two items using slicing.
 # TODO: implement
+nums = [10, 20, 30, 40, 50]
 
+print(nums[1], nums[-2:])
 
 # Drill 3: Unpacking
 # Prompt: Unpack point = [3, 7, 9] into x, y, z and print them.
 # TODO: implement
+point = [3, 7, 9]
+x, y, z = point
 
+print(x, y, z)
 
 # Drill 4: Looping with enumerate
 # Prompt: For names = ["Ana", "Ben", "Cleo"],
 # print "<index>: <name>" using enumerate.
 # TODO: implement
+names = ["Ana", "Ben", "Cleo"]
+
+for index, name in enumerate(names):
+    print(f"{index}: {name}")
 
 
 # Drill 5: Add/Remove items
 # Prompt: Start with letters = ["a", "b", "c"].
 # Perform: append("d"), insert(0, "-"), pop(0), remove("b"). Print final list.
 # TODO: implement
+letters = ["a", "b", "c"]
 
+letters.append("d")
+letters.insert(0, "-")
+letters.pop(0)
+letters.remove("b")
+
+print(letters)
 
 # Drill 6: Membership and search
 # Prompt: For values = [5, 42, 7, 42],
 # print the first index of 42 if present, else print "Not found".
 # TODO: implement
+values = [5, 42, 7, 42]
+# first solution
+for x in values:
+    if x == 42:
+        print(values.index(x))
+        break
+    else:
+        if 42 not in values:
+            print("Not found")
 
+# optimal solution
+values = [5, 42, 7, 42]
+
+if 42 in values:
+    print(values.index(42))
+else:
+    print("Not found")
 
 # Drill 7: Sorting basics
 # Prompt: Sort scores = [75, 92, 88, 69] ascending, then descending. Print both results.
@@ -135,5 +170,3 @@
 
 
 # ===== END OF DRILLS =====
-
-
