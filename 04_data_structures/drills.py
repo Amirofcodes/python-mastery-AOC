@@ -70,8 +70,6 @@ for x in values:
             print("Not found")
 
 # optimal solution
-values = [5, 42, 7, 42]
-
 if 42 in values:
     print(values.index(42))
 else:
