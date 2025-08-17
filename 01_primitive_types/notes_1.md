@@ -5,10 +5,6 @@
 ```bash
 first_name = "Bro"
 food = "pizza"
-email = "Bro123@fake.com"
-print(f"Hello {first_name}")
-print(f"You like {food}")
-print(f"Your email is: {email}")
 ```
 
 # integers
@@ -17,10 +13,6 @@ print(f"Your email is: {email}")
 age = 25
 quality = 3
 num_of_students = 30
-
-print(f"You are {age} years old")
-print(f"You are buying {quantity} items")
-print(f"Your class has {num_of_students} students")
 ```
 
 # float
@@ -29,194 +21,169 @@ print(f"Your class has {num_of_students} students")
 price = 10.99
 gpa = 3.2
 distance = 5.5
-
-print(f"The price is ${price}")
-print(f"Your gpa is: {gpa}")
-print(f"'You ran{distance}km")
 ```
 
 # boolean
 
 ```bash
-is_student = True # or False
-
-print(f"Are you a student?: {is_student}")
-
-if is_student:
-print("You are a student")
-else:
-print("You are NOT a student")
+is_student = True  # or False
 ```
 
 # Typecasting = the process of converting a variable from one data type to another str(), int(), float(), bool()
 
 # input() = A function that prompts the user to enter data. Returns the entered data as a string
 
-```bash
-name = input("What is your name?: ")
-age = input("How old are you?: ")
-age = int (age)
-age = age + 1
-
-print(f"Hello {name}!")
-print ("HAPPY BIRTHDAY!")
-print(f"You will be {age} years old next year")
-```
-
-# Exercise 1 Rectangle Area Calc
-
-```bash
-length = float(input("Enter the length: "))
-width = float(input("Enter the width: "))
-area = length \* width
-print(f"The area is: {area}cm²")
-```
-
-# Exercise 2 Shopping Cart Program
-
-```bash
-item = input("What item would you like to buy?: ")
-price = float(input("What is the price?: "))
-quantity = int(input("How many would you like?: "))
-total = price \* quantity
-
-print(f"You have bought {quantity} x {item}/s")
-print(f"Your total is: €{total)")
-```
-
----
-
 # ADVANCED STRING METHODS & TECHNIQUES
 
-# String Methods - strip(), replace(), len()
+# String Methods - strip(), replace(), len(), find(), rfind(), upper(), lower(), capitalize(), title(), startswith(), endswith(), count(), index()
 
 ```bash
+# strip(): Removes leading/trailing whitespace (or specified characters)
 password = " P@ssw0rd! "
-clean_password = password.strip()  # Removes leading/trailing spaces
-alt_password = clean_password.replace("@", "a")  # Replaces @ with a
-print(f"After cleaning: {alt_password}, length: {len(alt_password)}")
+clean_password = password.strip()                # -> "P@ssw0rd!"
+custom_strip = "---hello---".strip("-")         # -> "hello"
+
+# replace(old, new[, count]): Returns a copy with replacements; optional count limits how many
+alt_password = clean_password.replace("@", "a")  # -> "Passw0rd!"
+masked = "banana".replace("a", "*")             # -> "b*n*n*"
+limited = "ha ha ha".replace("ha", "ho", 1)     # -> "ho ha ha"
+
+# len(obj): Built-in function that returns number of items/characters
+msg = "hello"
+length = len(msg)                                 # -> 5
+
+# find(substring): Returns the lowest index where substring is found, -1 if not found
+quote = "knowledge is power"
+position = quote.find("is")    # -> 10
+missing = quote.find("hello")  # -> -1
+
+# rfind(substring): Returns the highest index where substring is found, -1 if not found
+text = "banana"
+last_pos = text.rfind("a")     # -> 5
+
+# upper(): Converts all characters to uppercase
+word = "python"
+shout = word.upper()             # -> "PYTHON"
+
+# lower(): Converts all characters to lowercase
+shout.lower()                    # -> "python"
+
+# capitalize(): Makes first character uppercase, rest lowercase
+greeting = "hELLO"
+fixed = greeting.capitalize()    # -> "Hello"
+
+# title(): Capitalizes first letter of each word
+sentence = "learn python fast"
+titled = sentence.title()        # -> "Learn Python Fast"
+
+# startswith(prefix): Checks if string starts with given prefix
+url = "https://openai.com"
+url.startswith("https")          # -> True
+
+# endswith(suffix): Checks if string ends with given suffix
+filename = "report.pdf"
+filename.endswith(".pdf")       # -> True
+
+# count(substring): Returns the number of non-overlapping occurrences
+phrase = "ha ha ha"
+laughs = phrase.count("ha")      # -> 3
+
+# index(substring): Like find() but raises an error if not found
+word = "banana"
+idx = word.index("n")            # -> 2
 ```
 
-# String Slicing & find() method
+# String Slicing
 
 ```bash
-# Extract file extension
-path = input("Enter file path: ").strip()
-dot = path.rfind(".")  # Find last occurrence of .
-extension = path[dot:]  # Slice from dot to end
-print(f"File extension: {extension}")
-
-# Extract names from "John Doe"
-full_name = "John Doe"
-space_pos = full_name.find(" ")  # Find position of space
-first_name = full_name[:space_pos]  # Slice from start to space
-last_name = full_name[space_pos + 1:]  # Slice from after space to end
-print(f"First: {first_name}, Last: {last_name}")
+# String slicing: Access parts of a string using [start:end:step]
+name = "amirofcodes"
+part1 = name[0:5]       # -> "amiro" (from index 0 up to, but not including, 5)
+part2 = name[5:]        # -> "fcodes" (from index 5 to the end)
+part3 = name[:4]        # -> "amir" (from beginning up to index 4)
+part4 = name[::2]       # -> "aiooe" (every 2nd character)
+reversed_name = name[::-1]  # -> "sedocforima" (reverses string)
 ```
 
 # String Membership & Boolean Operators
 
 ```bash
-# Email validation
-email = input("Enter email: ").strip()
-is_valid = "@" in email and "." in email  # Check both conditions
-print(f"Email valid: {is_valid}")
+# Membership operators: 'in' and 'not in'
+text = "Python is fun"
+"Python" in text        # -> True
+"java" in text          # -> False
+"java" not in text      # -> True
 
-# String length and case conversion
-quote = "Talk is cheap. Show me the code."
-print(f"Length: {len(quote)}")
-print(f"Last word uppercase: {quote[-5:-1].upper()}")
+# Boolean operators: and, or, not
+x = True
+y = False
+
+result1 = x and y       # -> False (both must be True)
+result2 = x or y        # -> True  (at least one must be True)
+result3 = not x         # -> False (negates the value)
+
+# Combined usage
+username = "amirofcodes"
+valid = ("amiro" in username) and (len(username) > 5)   # -> True
 ```
 
 # Escape Sequences & Multi-line Strings
 
 ```bash
-# Using \n for line breaks
-sentence = "This spans\nmultiple lines\nwith escape sequences"
-print(sentence)
+# Escape sequences: special characters inside strings
+newline = "Hello\nWorld"     # -> "Hello" (new line) "World"
+tabbed = "1\t2\t3"          # -> "1    2    3"
+quote = "She said, \"hi!\""  # -> She said, "hi!"
 
-# Using triple quotes for multi-line
-multi_line = """This is a multi-line string
-that spans several lines
-and preserves formatting"""
-word_count = len(multi_line.split())  # Count words, not characters
-print(f"Total words: {word_count}")
+# Multi-line strings: triple quotes
+poem = """Roses are red,
+Violets are blue,
+Python is fun,
+And so are you."""
 ```
 
----
-
 # NUMBER FORMATTING & ARITHMETIC
+
+```bash
+# Basic arithmetic: +, -, *, /, // (floor division), % (modulus), ** (exponent)
+a = 10
+b = 3
+add = a + b     # -> 13
+sub = a - b     # -> 7
+mul = a * b     # -> 30
+div = a / b     # -> 3.333...
+floor = a // b  # -> 3
+mod = a % b     # -> 1
+exp = a ** b    # -> 1000
+
+# Number formatting with f-strings
+price = 1234.5678
+formatted = f"${price:,.2f}"   # -> "1,234.57"
+```
 
 # Rounding & Type Conversion
 
 ```bash
+# round(number, ndigits): round to decimals
 pi = 3.14159
-rounded_pi = round(pi, 2)  # Round to 2 decimal places
-integer_pi = int(pi)  # Convert to integer (truncates)
-print(f"Rounded: {rounded_pi}, Integer: {integer_pi}")
+rounded = round(pi, 2)   # -> 3.14
+
+# int(): convert to integer (truncates)
+int(3.9)   # -> 3
+
+# float(): convert to float
+float(5)   # -> 5.0
 ```
 
 # Formatted Strings with Number Formatting
 
 ```bash
-big_number = 1234567.89
-formatted = f"{big_number:,.2f}"  # Thousands separator + 2 decimals
-print(formatted)  # Output: 1,234,567.89
-
-# Temperature conversion with formatting
-celsius = float(input("Enter Celsius: "))
-fahrenheit = celsius * 9/5 + 32
-print(f"{celsius}°C = {fahrenheit:.1f}°F")
+# f-strings allow embedding expressions with formatting
+name = "Amiro"
+balance = 9876.54321
+msg = f"Hello {name}, your balance is ${balance:,.2f}"
+# -> "Hello Amiro, your balance is $9,876.54"
 ```
-
-# Compound Interest & Exponentiation
-
-```bash
-P = 100  # Principal
-r = 0.04  # Rate (4%)
-n = 5     # Years
-A = P * (1 + r) ** n  # Compound interest formula
-print(f"Final amount: €{round(A, 2)}")
-```
-
----
-
-# VARIABLE NAMING CONVENTIONS
-
-# Python prefers snake_case
-
-```bash
-# Good (Pythonic)
-snake_case_variable = "I follow Python convention"
-user_name = "John"
-total_price = 99.99
-
-# Works but not Pythonic
-camelCaseVariable = "I'm from other languages"
-userName = "John"
-totalPrice = 99.99
-
-print(snake_case_variable)  # Python prefers this
-print(camelCaseVariable)    # Works but not conventional
-```
-
----
-
-# MULTIPLE ASSIGNMENT & SWAPPING
-
-```bash
-# Swap variables without temp
-a = 10
-b = 5
-a, b = b, a  # Multiple assignment
-print(f"a: {a}, b: {b}")  # a: 5, b: 10
-
-# Multiple variable assignment
-x, y, z = 1, 2, 3
-print(f"x: {x}, y: {y}, z: {z}")
-```
-
----
 
 # KEY CONCEPTS SUMMARY
 

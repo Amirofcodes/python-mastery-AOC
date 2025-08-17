@@ -1,3 +1,5 @@
+# Scope: primitives, control flow, strings (+ import random)
+# No try/except, no comprehensions, no classes no fuctions.
 import random
 
 print("******* Welcome to the number-guessing game *******")

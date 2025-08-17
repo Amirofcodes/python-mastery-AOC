@@ -1,3 +1,5 @@
+# Scope: primitives, control flow
+# No try/except, no comprehensions, no classes no functions.
 print("*********** Welcome to Smart Converter v1.0 ***********")
 
 conversion_count = 0

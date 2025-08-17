@@ -1,3 +1,5 @@
+# Scope: primitives, control flow, strings, functions (+ import random)
+# No try/except, no comprehensions, no classes.
 print("*********** Welcome to Smart Converter v1.2 ***********")
 
 # Constants (just variables)

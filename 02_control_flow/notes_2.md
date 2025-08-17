@@ -4,493 +4,314 @@
 
 # Allows programs to make decisions and repeat actions based on conditions
 
----
-
 # COMPARISON OPERATORS
 
 # Used to compare values and return True or False
 
-```python
-# Basic comparison operators
-x = 5
-y = 10
+# Formula: value1 operator value2 → True/False
 
-print(x == y)   # Equal to: False
-print(x != y)   # Not equal to: True
-print(x < y)    # Less than: True
-print(x > y)    # Greater than: False
-print(x <= y)   # Less than or equal to: True
-print(x >= y)   # Greater than or equal to: False
+```bash
+# Equality and inequality
+5 == 5          # -> True
+5 != 3          # -> True
+"hi" == "Hi"     # -> False (case-sensitive)
+
+# Greater / Less (and inclusive versions)
+7 > 3           # -> True
+7 >= 7          # -> True
+2 < 1           # -> False
+2 <= 2          # -> True
+
+# Comparing strings: lexicographic (Unicode) order
+"apple" < "banana"  # -> True
+"Z" < "a"           # -> True (uppercase < lowercase)
+
+# Comparing different types: convert first
+"5" == 5        # -> False
+int("5") == 5    # -> True
+
+# Chained comparisons (Pythonic range check)
+x = 7
+0 < x < 10      # -> True (x is between 0 and 10)
 ```
-
-# String comparisons (lexicographical order)
-
-```python
-name1 = "Alice"
-name2 = "Bob"
-print(name1 < name2)  # True (A comes before B)
-print(name1 == name2) # False
-```
-
----
 
 # CONDITIONAL STATEMENTS (if/elif/else)
 
 # if statement - executes code only if condition is True
 
-```python
+# Formula: if condition: do something
+
+```bash
 age = 18
 
 if age >= 18:
     print("You are an adult")
-    print("You can vote")
+# -> "You are an adult"
 ```
 
-# if/else statement - executes different code based on condition
+# if/else - choose between two paths
 
-```python
-age = 16
+# Formula: if condition: X else: Y
 
-if age >= 18:
-    print("You are an adult")
+```bash
+num = 5
+if num % 2 == 0:
+    print("Even number")
 else:
-    print("You are a minor")
+    print("Odd number")
+# -> "Odd number"
 ```
 
-# if/elif/else statement - multiple conditions
+# if/elif/else - multiple conditions
 
-```python
-age = 25
+# Formula: if cond1: X elif cond2: Y else: Z
 
-if age < 13:
-    print("You are a child")
-elif age < 18:
-    print("You are a teenager")
-elif age < 65:
-    print("You are an adult")
+```bash
+score = 85
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
 else:
-    print("You are a senior")
+    print("Grade: F")
+# -> "Grade: B"
 ```
 
 # Nested if statements
 
-```python
+# Formula: if cond1: if cond2: X else: Y else: Z
+
+```bash
 age = 20
-has_license = True
+has_id = True
 
 if age >= 18:
-    if has_license:
-        print("You can drive")
+    if has_id:
+        print("Access granted")
     else:
-        print("You need a license")
+        print("ID required")
 else:
-    print("You are too young to drive")
+    print("Too young")
+# -> "Access granted"
 ```
-
----
 
 # TERNARY OPERATOR (Conditional Expression)
 
-# Shorthand way to write simple if/else statements
+# A one-line shortcut for the if/else statement
 
-```python
-age = 20
+# Formula: X if condition else Y
 
-# Traditional if/else
-if age >= 18:
-    status = "adult"
-else:
-    status = "minor"
+# Prints or assigns one of two values based on the condition
 
-# Ternary operator (one-liner)
-status = "adult" if age >= 18 else "minor"
-
-print(f"You are an {status}")
-
-# Another example
-number = 7
-result = "even" if number % 2 == 0 else "odd"
-print(f"{number} is {result}")
+```bash
+age = 18
+status = "Adult" if age >= 18 else "Minor"
+print(status)
+# -> "Adult"
 ```
-
----
 
 # LOGICAL OPERATORS
 
 # Combine multiple conditions
 
-```python
-# AND operator - both conditions must be True
-age = 25
-has_license = True
+# Formula: condition1 and/or/not condition2 → True/False
 
-if age >= 18 and has_license:
-    print("You can drive")
+```bash
+# and: both must be True
+x = 5
+y = 10
+x > 0 and y > 0   # -> True
 
-# OR operator - at least one condition must be True
-is_student = True
-is_employed = False
+# or: at least one must be True
+x < 0 or y > 0    # -> True
 
-if is_student or is_employed:
-    print("You have a discount")
-
-# NOT operator - negates the condition
-is_weekend = False
-
-if not is_weekend:
-    print("It's a weekday")
+# not: negates the condition
+not(x > 0)        # -> False
 ```
 
 # Complex logical expressions
 
-```python
-age = 20
-has_license = True
-has_car = False
+```bash
+age = 25
+has_ticket = True
+has_id = False
 
-# Can drive if: (18+ AND has license) OR has car
-can_drive = (age >= 18 and has_license) or has_car
-print(f"Can drive: {can_drive}")
+if (age >= 18 and has_ticket) or has_id:
+    print("Entry allowed")
+else:
+    print("Entry denied")
+# -> "Entry allowed"
 ```
-
----
 
 # SHORT-CIRCUIT EVALUATION
 
 # Python stops evaluating as soon as it knows the result
 
-```python
-# AND short-circuit: stops at first False
-x = 5
-y = 0
+```bash
+# 'or' stops if first condition is True
+True or print("This will not run")  # -> True
 
-# This won't cause division by zero error
-if y != 0 and x / y > 2:
-    print("Condition met")
-
-# OR short-circuit: stops at first True
-name = "John"
-age = 25
-
-# This won't cause error if name is empty
-if name or age > 18:
-    print("Valid user")
+# 'and' stops if first condition is False
+False and print("This will not run") # -> False
 ```
-
-# Practical example - safe division
-
-```python
-numerator = 10
-denominator = 0
-
-# Safe division using short-circuit
-if denominator != 0 and numerator / denominator > 2:
-    print("Result is greater than 2")
-else:
-    print("Cannot divide or result is not greater than 2")
-```
-
----
 
 # CHAINING COMPARISON OPERATORS
 
 # Python allows chaining multiple comparisons
 
-```python
-age = 25
+# Formula: a < b < c < d
 
-# Traditional way
-if age >= 18 and age <= 65:
-    print("Working age")
-
-# Chained comparison (more readable)
-if 18 <= age <= 65:
-    print("Working age")
-
-# Multiple chained comparisons
+```bash
 x = 5
-y = 10
-z = 15
-
-if x < y < z:
-    print("Numbers are in ascending order")
-
-# Temperature range example
-temp = 22
-if 20 <= temp <= 25:
-    print("Comfortable temperature")
+print(0 < x < 10)   # -> True
+print(0 < x < 3)    # -> False
 ```
-
----
 
 # FOR LOOPS
 
 # Iterate over sequences (strings, lists, ranges)
 
-```python
-# Loop through a string
-name = "Python"
-for letter in name:
-    print(letter)
+# Formula: for variable in sequence: do something
 
-# Loop through a range
+```bash
+# Iterate over a range
 for i in range(5):
-    print(i)  # Prints 0, 1, 2, 3, 4
+    print(i)
+# -> 0 1 2 3 4
 
-# Loop with start and end
-for i in range(1, 6):
-    print(i)  # Prints 1, 2, 3, 4, 5
+# Iterate over a string
+for char in "hello":
+    print(char)
+# -> h e l l o
 
-# Loop with step
-for i in range(0, 10, 2):
-    print(i)  # Prints 0, 2, 4, 6, 8
+# Iterate over a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+# -> apple banana cherry
 ```
-
-# range() function variations
-
-```python
-# range(stop) - starts from 0
-for i in range(3):
-    print(i)  # 0, 1, 2
-
-# range(start, stop) - starts from start
-for i in range(2, 5):
-    print(i)  # 2, 3, 4
-
-# range(start, stop, step) - with step
-for i in range(0, 10, 3):
-    print(i)  # 0, 3, 6, 9
-```
-
----
 
 # FOR-ELSE STATEMENT
 
 # else block executes when loop completes normally (no break)
 
-```python
-# Search for a number in a list
-numbers = [1, 3, 5, 7, 9]
-search_for = 4
+# Formula: for var in sequence: ... else: ...
 
-for num in numbers:
-    if num == search_for:
-        print(f"Found {search_for}!")
-        break
+```bash
+for i in range(3):
+    print(i)
 else:
-    print(f"{search_for} not found in the list")
+    print("Loop finished")
+# -> 0 1 2  \n "Loop finished"
 
-# Another example - password validation
-password = "secret123"
-attempts = ["wrong", "also_wrong", "secret123", "another_wrong"]
-
-for attempt in attempts:
-    if attempt == password:
-        print("Access granted!")
+for i in range(3):
+    if i == 1:
         break
+    print(i)
 else:
-    print("Access denied - too many wrong attempts")
+    print("Loop finished")
+# -> 0 (else skipped because of break)
 ```
-
----
 
 # NESTED LOOPS
 
 # Loops inside loops
 
-```python
-# Multiplication table (3x3)
-for i in range(1, 4):
-    for j in range(1, 4):
-        print(f"{i} x {j} = {i * j}")
-    print()  # Empty line after each row
+# Formula: for x in seq1: for y in seq2: do something
 
-# Pattern printing
-for i in range(3):
-    for j in range(i + 1):
-        print("*", end="")
-    print()  # New line after each row
-```
-
-# Practical example - coordinate grid
-
-```python
-# Print coordinates (0,0) to (2,2)
-for x in range(3):
+```bash
+for x in range(2):
     for y in range(3):
-        print(f"({x},{y})", end=" ")
-    print()  # New line after each row
+        print(f"x={x}, y={y}")
+# -> x=0,y=0  x=0,y=1  x=0,y=2  x=1,y=0  x=1,y=1  x=1,y=2
 ```
-
----
 
 # WHILE LOOPS
 
 # Repeat code while condition is True
 
-```python
-# Basic while loop
+# Formula: while condition: do something
+
+```bash
 count = 0
 while count < 5:
-    print(f"Count: {count}")
+    print(count)
     count += 1
-
-# User input validation
-password = "secret123"
-attempts = 0
-max_attempts = 3
-
-while attempts < max_attempts:
-    user_input = input("Enter password: ")
-    if user_input == password:
-        print("Access granted!")
-        break
-    else:
-        attempts += 1
-        print(f"Wrong password. {max_attempts - attempts} attempts left")
+# -> 0 1 2 3 4
 ```
 
 # Counter-controlled while loop
 
-```python
-# Count down from 5
-countdown = 5
-while countdown > 0:
-    print(countdown)
-    countdown -= 1
-print("Blast off!")
+```bash
+num = 3
+while num > 0:
+    print("Countdown:", num)
+    num -= 1
+# -> 3 2 1
 ```
-
----
 
 # INFINITE LOOPS
 
 # Loops that run forever (usually with break to exit)
 
-```python
-# Game loop example
+```bash
 while True:
-    user_input = input("Enter 'quit' to exit: ")
-    if user_input.lower() == 'quit':
+    cmd = input("Type 'exit' to quit: ")
+    if cmd == "exit":
         break
-    print(f"You entered: {user_input}")
-
-# Menu system
-while True:
-    print("\n1. Option 1")
-    print("2. Option 2")
-    print("3. Quit")
-
-    choice = input("Enter your choice (1-3): ")
-
-    if choice == "1":
-        print("You chose option 1")
-    elif choice == "2":
-        print("You chose option 2")
-    elif choice == "3":
-        print("Goodbye!")
-        break
-    else:
-        print("Invalid choice. Please try again.")
 ```
-
----
 
 # BREAK AND CONTINUE
 
 # Control flow within loops
 
-```python
-# break - exit the loop immediately
-for i in range(10):
-    if i == 5:
+# break = exit loop entirely
+
+# continue = skip to next iteration
+
+```bash
+# break example
+for i in range(5):
+    if i == 3:
         break
-    print(i)  # Prints 0, 1, 2, 3, 4
+    print(i)
+# -> 0 1 2
 
-# continue - skip to next iteration
-for i in range(10):
-    if i % 2 == 0:  # Skip even numbers
+# continue example
+for i in range(5):
+    if i == 2:
         continue
-    print(i)  # Prints 1, 3, 5, 7, 9
+    print(i)
+# -> 0 1 3 4
 ```
 
-# Practical examples
+# WHILE-ELSE STATEMENT
 
-```python
-# Find first negative number
-numbers = [1, 3, -2, 5, 7]
-for num in numbers:
-    if num < 0:
-        print(f"First negative number: {num}")
-        break
+# else block executes when while loop completes normally (no break)
 
-# Skip processing for invalid data
-scores = [85, 92, -1, 78, 95, -1, 88]
-for score in scores:
-    if score == -1:  # Invalid score
-        continue
-    print(f"Processing score: {score}")
-```
+# Formula: while condition: ... else: ...
 
----
-
-# ITERABLES
-
-# Objects that can be iterated over in loops
-
-```python
-# String iteration
-for char in "Hello":
-    print(char)
-
-# List iteration
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
-    print(fruit)
-
-# Tuple iteration
-coordinates = (1, 2), (3, 4), (5, 6)
-for x, y in coordinates:
-    print(f"Point: ({x}, {y})")
-
-# Dictionary iteration
-person = {"name": "John", "age": 30, "city": "NYC"}
-for key in person:
-    print(f"{key}: {person[key]}")
-
-# Dictionary items iteration
-for key, value in person.items():
-    print(f"{key}: {value}")
-```
-
----
-
-# MEMBERSHIP TESTING
-
-# Check if item exists in iterable
-
-```python
-# Using 'in' operator
-fruits = ["apple", "banana", "cherry"]
-print("apple" in fruits)  # True
-print("orange" in fruits)  # False
-
-# String membership
-text = "Hello World"
-print("Hello" in text)  # True
-print("Python" in text)  # False
-
-# Practical example - user validation
-allowed_users = ["admin", "user1", "user2"]
-username = input("Enter username: ")
-
-if username in allowed_users:
-    print("Access granted")
+```bash
+count = 0
+while count < 3:
+    print(count)
+    count += 1
 else:
-    print("Access denied")
-```
+    print("Loop finished")
+# -> 0 1 2  \n "Loop finished"
 
----
+count = 0
+while count < 3:
+    if count == 1:
+        break
+    print(count)
+    count += 1
+else:
+    print("Loop finished")
+# -> 0 (else skipped because of break)
+```
 
 # KEY CONCEPTS SUMMARY
 
@@ -520,6 +341,7 @@ else:
 ## Loop Patterns
 
 - `for-else` - Execute else when loop completes normally
+- `while-else` - Execute else when while loop completes normally
 - `while True` - Infinite loop with break
 - Nested loops - Loops inside loops
 

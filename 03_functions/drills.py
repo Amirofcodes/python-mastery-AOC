@@ -137,7 +137,7 @@ def validate_email(email):
     if "@" in email and "." in email and len(email) >= 5:
         return True
     else:
-        return Fals
+        return False
 
 
 print(validate_email("user@site.com"))
@@ -228,5 +228,12 @@ def divide_lambda(a, b): return a / b if b != 0 else None
 
 def calculate(a, b, operation):
     return operation(a, b)
+
+
+print(calculate(5, 2, add_lambda))
+print(calculate(5, 2, subtract_lambda))
+print(calculate(5, 2, multiply_lambda))
+print(calculate(5, 2, divide_lambda))
+
 
 # ===== END OF DRILLS =====
