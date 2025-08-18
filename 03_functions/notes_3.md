@@ -4,278 +4,542 @@
 
 # Allow breaking complex problems into smaller, manageable pieces
 
-```bash
-# Function formula
-# def function_name(parameters):
-#     """optional docstring"""
-#     code block
-#     return value (optional)
-```
+---
 
-# Example
+# DEFINING FUNCTIONS
 
-```bash
+# Basic function definition using 'def' keyword
+
+```python
+# Simple function with no parameters
 def greet():
-    print("Hello, world!")
+    print("Hello, World!")
 
-greet()  # -> "Hello, world!"
+# Call the function
+greet()  # Output: Hello, World!
+
+# Function with parameters
+def greet_person(name):
+    print(f"Hello, {name}!")
+
+greet_person("Alice")  # Output: Hello, Alice!
+
+# Function with multiple parameters
+def add_numbers(a, b):
+    result = a + b
+    print(f"{a} + {b} = {result}")
+
+add_numbers(5, 3)  # Output: 5 + 3 = 8
 ```
+
+# Function naming conventions
+
+```python
+# Use snake_case for function names
+def calculate_area():
+    pass
+
+def get_user_input():
+    pass
+
+def process_payment_data():
+    pass
+
+# Functions should be verbs (actions)
+def validate_email():
+    pass
+
+def convert_temperature():
+    pass
+```
+
+---
 
 # RETURN STATEMENTS
 
 # Functions can return values using 'return' keyword
 
-# Formula: return expression
-
-```bash
+```python
+# Function that returns a value
 def add(a, b):
     return a + b
 
-result = add(3, 4)
-print(result)
-# -> 7
+# Use the returned value
+result = add(5, 3)
+print(result)  # Output: 8
+
+# Function with multiple return statements
+def get_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+grade = get_grade(85)
+print(f"Your grade is: {grade}")  # Output: Your grade is: B
 ```
 
 # Return vs Print
 
-```bash
-def square(x):
-    return x * x
+```python
+# Function that prints (no return value)
+def print_sum(a, b):
+    print(a + b)
 
-print(square(5))  # -> 25
-# return gives a value back; print only displays text
+# Function that returns (can be used in expressions)
+def calculate_sum(a, b):
+    return a + b
+
+# Usage difference
+print_sum(5, 3)  # Prints: 8, but returns None
+result = calculate_sum(5, 3)  # Returns 8, can be stored
+print(result * 2)  # Can use the result in calculations
 ```
+
+---
 
 # FUNCTION ARGUMENTS
 
 # Positional arguments - order matters
 
-# Formula: function(arg1, arg2, ...)
+```python
+def introduce(name, age, city):
+    print(f"Hi, I'm {name}, {age} years old, from {city}")
 
-```bash
-def divide(a, b):
-    return a / b
+# Arguments passed by position
+introduce("John", 25, "New York")
+# Output: Hi, I'm John, 25 years old, from New York
 
-print(divide(10, 2))  # -> 5.0
+# Order matters!
+introduce(25, "John", "New York")  # Wrong!
+# Output: Hi, I'm 25, John years old, from New York
 ```
 
 # Variable number of arguments
 
-# Formula: \*args → tuple of extra arguments
+```python
+# *args - accepts any number of positional arguments
+def sum_all(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
 
-```bash
-def total(*numbers):
-    return sum(numbers)
+print(sum_all(1, 2, 3))        # Output: 6
+print(sum_all(1, 2, 3, 4, 5))  # Output: 15
 
-print(total(1, 2, 3, 4))  # -> 10
+# **kwargs - accepts any number of keyword arguments
+def print_info(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+print_info(name="Alice", age=30, city="Boston")
+# Output:
+# name: Alice
+# age: 30
+# city: Boston
 ```
+
+---
 
 # KEYWORD ARGUMENTS
 
 # Named arguments - order doesn't matter
 
-# Formula: function(param=value)
+```python
+def create_profile(name, age, email, city):
+    return f"Profile: {name}, {age}, {email}, {city}"
 
-```bash
-def greet(name, message):
-    print(f"{message}, {name}!")
+# Using keyword arguments
+profile = create_profile(
+    age=25,
+    name="Alice",
+    city="Boston",
+    email="alice@email.com"
+)
+print(profile)
 
-greet(name="Amiro", message="Welcome")
-# -> "Welcome, Amiro!"
+# Mix positional and keyword arguments
+profile2 = create_profile("Bob", age=30, email="bob@email.com", city="Seattle")
 ```
 
-# Keyword-only arguments (after \*)
+# Keyword-only arguments
 
-```bash
-def configure(*, debug=False):
-    print("Debug mode:", debug)
+```python
+# Arguments after * must be passed as keywords
+def calculate_price(base_price, *, discount=0, tax_rate=0.1):
+    discounted = base_price * (1 - discount)
+    final_price = discounted * (1 + tax_rate)
+    return final_price
 
-configure(debug=True)  # -> Debug mode: True
+# Must use keyword arguments for discount and tax_rate
+price = calculate_price(100, discount=0.2, tax_rate=0.08)
+print(f"Final price: ${price:.2f}")
 ```
+
+---
 
 # DEFAULT ARGUMENTS
 
 # Parameters with default values
 
-# Formula: def func(param=value)
+```python
+# Function with default parameter
+def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
 
-```bash
-def greet(name="Guest"):
-    print("Hello", name)
+greet("Alice")              # Uses default: Hello, Alice!
+greet("Bob", "Hi")          # Custom greeting: Hi, Bob!
+greet("Charlie", "Hey")     # Custom greeting: Hey, Charlie!
 
-greet()           # -> Hello Guest
-greet("Amiro")     # -> Hello Amiro
+# Multiple default parameters
+def create_user(username, email, role="user", active=True):
+    return {
+        "username": username,
+        "email": email,
+        "role": role,
+        "active": active
+    }
+
+# Use some defaults
+user1 = create_user("alice", "alice@email.com")
+print(user1)  # {'username': 'alice', 'email': 'alice@email.com', 'role': 'user', 'active': True}
+
+# Override defaults
+user2 = create_user("admin", "admin@email.com", role="admin", active=False)
+print(user2)
 ```
 
 # Default argument gotchas
 
-```bash
-def append_item(item, items=[]):
+```python
+# AVOID: Mutable default arguments
+def add_item(item, items=[]):  # DON'T DO THIS!
     items.append(item)
     return items
 
-print(append_item(1))  # -> [1]
-print(append_item(2))  # -> [1, 2]  (list reused!)
+# CORRECT: Use None as default
+def add_item(item, items=None):
+    if items is None:
+        items = []
+    items.append(item)
+    return items
 ```
+
+---
 
 # FUNCTION SCOPE
 
+# Local vs Global variables
+
+```python
+# Global variable
+global_var = "I'm global"
+
+def my_function():
+    # Local variable
+    local_var = "I'm local"
+    print(f"Inside function: {global_var}")  # Can access global
+    print(f"Inside function: {local_var}")   # Can access local
+
+my_function()
+print(f"Outside function: {global_var}")    # Can access global
+# print(local_var)  # ERROR! Can't access local variable outside function
+```
+
 # Variable shadowing
 
-```bash
-x = 10
+```python
+name = "Global Alice"
 
-def func():
-    x = 5  # local variable shadows global
-    print(x)
+def greet():
+    name = "Local Bob"  # Shadows global variable
+    print(f"Hello, {name}")
 
-func()  # -> 5
-print(x)  # -> 10
+greet()        # Output: Hello, Local Bob
+print(name)    # Output: Global Alice (unchanged)
 ```
 
 # Global keyword
 
-```bash
-count = 0
+```python
+counter = 0  # Global variable
 
 def increment():
-    global count
-    count += 1
+    global counter  # Declare we want to modify global
+    counter += 1
+    print(f"Counter: {counter}")
 
-increment()
-print(count)  # -> 1
+increment()  # Counter: 1
+increment()  # Counter: 2
+print(f"Final counter: {counter}")  # Final counter: 2
 ```
 
-# Local vs Global variables
-
-```bash
-global_var = "I am global"
-
-def test_scope():
-    local_var = "I am local"
-    print(global_var)
-    print(local_var)
-
-test_scope()
-# -> "I am global"
-# -> "I am local"
-```
+---
 
 # NESTED FUNCTIONS
 
 # Functions inside functions
 
-# Formula: def outer(): def inner(): ...
+```python
+def outer_function(x):
+    def inner_function(y):
+        return x + y
 
-```bash
-def outer():
-    def inner():
-        return "Hello from inner"
-    return inner()
+    return inner_function(10)
 
-print(outer())  # -> Hello from inner
+result = outer_function(5)
+print(result)  # Output: 15
+
+# Closures - inner function remembers outer variables
+def create_multiplier(factor):
+    def multiply(number):
+        return number * factor
+    return multiply
+
+# Create specialized functions
+double = create_multiplier(2)
+triple = create_multiplier(3)
+
+print(double(5))  # Output: 10
+print(triple(5))  # Output: 15
 ```
+
+---
 
 # FUNCTION TYPES
 
 # Pure functions - same input always gives same output
 
-```bash
-def pure_add(a, b):
-    return a + b
+```python
+# Pure function - no side effects
+def calculate_area(length, width):
+    return length * width
+
+# Always returns same result for same inputs
+area1 = calculate_area(5, 3)  # Always 15
+area2 = calculate_area(5, 3)  # Always 15
 ```
 
 # Functions with side effects
 
-```bash
-state = []
-def add_item(x):
-    state.append(x)  # modifies external variable
+```python
+# Function with side effects (prints, modifies global state)
+total_calls = 0
+
+def log_and_add(a, b):
+    global total_calls
+    total_calls += 1
+    print(f"Call #{total_calls}: Adding {a} and {b}")
+    return a + b
+
+result = log_and_add(2, 3)  # Has side effects: prints and modifies global
 ```
 
-# Higher-order functions - take or return other functions
+# Higher-order functions
 
-```bash
-def apply(func, value):
-    return func(value)
+```python
+# Functions that take other functions as parameters
+def apply_operation(numbers, operation):
+    results = []
+    for num in numbers:
+        results.append(operation(num))
+    return results
 
-print(apply(lambda x: x**2, 3))  # -> 9
+def square(x):
+    return x * x
+
+def double(x):
+    return x * 2
+
+numbers = [1, 2, 3, 4, 5]
+squared = apply_operation(numbers, square)
+doubled = apply_operation(numbers, double)
+
+print(f"Squared: {squared}")  # [1, 4, 9, 16, 25]
+print(f"Doubled: {doubled}")  # [2, 4, 6, 8, 10]
 ```
+
+---
 
 # LAMBDA FUNCTIONS
 
 # Anonymous functions for simple operations
 
-# Formula: lambda parameters: expression
+```python
+# Regular function
+def add(x, y):
+    return x + y
 
-```bash
+# Lambda equivalent
+add_lambda = lambda x, y: x + y
+
+print(add(5, 3))        # Output: 8
+print(add_lambda(5, 3)) # Output: 8
+
+# Lambda with single parameter
 square = lambda x: x * x
-print(square(4))  # -> 16
+print(square(4))  # Output: 16
+
+# Lambda in higher-order functions
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x * x, numbers))
+print(squared)  # [1, 4, 9, 16, 25]
+
+# Lambda with conditionals
+max_val = lambda a, b: a if a > b else b
+print(max_val(10, 5))  # Output: 10
 ```
+
+---
+
+# DEBUGGING FUNCTIONS
+
+# Using print statements for debugging
+
+```python
+def calculate_compound_interest(principal, rate, time):
+    print(f"DEBUG: principal={principal}, rate={rate}, time={time}")
+
+    amount = principal
+    for year in range(time):
+        interest = amount * rate
+        amount += interest
+        print(f"DEBUG: Year {year + 1}, Interest={interest:.2f}, Amount={amount:.2f}")
+
+    return amount
+
+result = calculate_compound_interest(1000, 0.05, 3)
+print(f"Final amount: ${result:.2f}")
+```
+
+# Using return values for debugging
+
+```python
+def validate_input(value):
+    if not isinstance(value, (int, float)):
+        return False, "Value must be a number"
+    if value < 0:
+        return False, "Value must be positive"
+    return True, "Valid input"
+
+# Check validation results
+is_valid, message = validate_input(-5)
+if not is_valid:
+    print(f"Error: {message}")
+else:
+    print("Input is valid")
+```
+
+---
 
 # RUNNING SCRIPTS SAFELY (THE MAIN GUARD)
 
+# Use a guard to prevent top-level code from running on import
+
+```python
+def run_converter():
+    print("Running the converter loop...")
+    # ... main loop here ...
+
+
+if __name__ == "__main__":
+    # This block runs ONLY when the file is executed directly:
+    # python unit_converter_v2.py
+    run_converter()
+```
+
 # Why this matters
 
-# - When Python loads a file, it sets a built-in variable **name**.
+- When Python loads a file, it sets a built-in variable `__name__`.
+- If the file is executed directly, `__name__ == "__main__"`.
+- If the file is imported from another file, `__name__` becomes the module name, so the guarded block does NOT run.
+- This lets you keep reusable functions importable without triggering the script’s CLI logic.
 
-# - If the file is executed directly, **name** == "**main**".
+# Quick check
 
-# - If imported, **name** is the module name, so the guarded block does NOT run.
+```python
+print("Module name:", __name__)
 
-# - This lets you keep reusable functions importable without triggering CLI logic.
+def add(a, b):
+    return a + b
 
-```bash
-# Formula:
 if __name__ == "__main__":
-    # code runs only when executed directly
-    main()
+    # Runs only when this file is executed directly
+    print(add(2, 3))
 ```
+
+# Mini‑drill
+
+1. Add `print("Module:", __name__)` near the top of a script and run it with `python your_file.py`.
+2. Observe it prints `__main__`.
+3. Create another file and `import your_file`; observe the printed module name is `your_file` and the guarded block does not run.
+
+---
 
 # COMMON FUNCTION PATTERNS
 
 # Input validation pattern
 
-```bash
-def get_age():
-    while True:
-        age = input("Enter age: ")
-        if age.isdigit():
-            return int(age)
-        print("Invalid input, try again.")
+```python
+def safe_divide(a, b):
+    if b == 0:
+        return None, "Cannot divide by zero"
+    return a / b, "Success"
+
+result, message = safe_divide(10, 2)
+if result is not None:
+    print(f"Result: {result}")
+else:
+    print(f"Error: {message}")
 ```
 
 # Configuration pattern
 
-```bash
-def setup(debug=False):
-    if debug:
-        print("Debug mode on")
-    else:
-        print("Normal mode")
+```python
+def create_connection(host="localhost", port=5432, database="mydb", timeout=30):
+    return {
+        "host": host,
+        "port": port,
+        "database": database,
+        "timeout": timeout,
+        "status": "connected"
+    }
+
+# Use defaults
+conn1 = create_connection()
+
+# Override specific settings
+conn2 = create_connection(host="production.db", timeout=60)
 ```
 
 # Factory pattern
 
-```bash
-def make_multiplier(n):
-    def multiplier(x):
-        return x * n
-    return multiplier
+```python
+def create_calculator(operation):
+    if operation == "add":
+        return lambda x, y: x + y
+    elif operation == "multiply":
+        return lambda x, y: x * y
+    elif operation == "power":
+        return lambda x, y: x ** y
+    else:
+        return lambda x, y: 0
 
-double = make_multiplier(2)
-print(double(5))  # -> 10
+adder = create_calculator("add")
+multiplier = create_calculator("multiply")
+
+print(adder(5, 3))      # Output: 8
+print(multiplier(4, 6)) # Output: 24
 ```
 
-# Use a guard to prevent top-level code from running on import
-
-```bash
-def main():
-    print("Program running")
-
-if __name__ == "__main__":
-    main()
-```
+---
 
 # KEY CONCEPTS SUMMARY
 
@@ -341,3 +605,19 @@ if __name__ == "__main__":
 - What: optional annotations that describe parameter and return types. Example: `def add(a: float, b: float) -> float:`
 - Why: improves readability, editor help, and static analysis. Python ignores hints at runtime (no behavior change).
 - When: keep v1 solutions without hints if you prefer; we’ll start using hints more after Exceptions and Data Structures.
+
+```python
+# Parameters and return types
+def add(a: float, b: float) -> float:
+    return a + b
+
+# Default values + simple bools and strings
+def greeting(name: str, excited: bool = False) -> str:
+    suffix = "!" if excited else "."
+    return f"Hello, {name}{suffix}"
+```
+
+Mini‑drill (2–3 min)
+
+1. Add type hints to `calculate_area(length, width)` and `safe_divide(a, b)` in your code.
+2. Run the file normally. Notice everything still works; hints are for tools and humans.

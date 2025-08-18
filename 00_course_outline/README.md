@@ -13,20 +13,20 @@ A comprehensive, progressive learning path for Python mastery. Each section buil
 
 ## 📋 **Complete Course Map**
 
-| #   | Section                                   | Status         | Drills | Mini-Projects | Key Concepts                                    |
-| --- | ----------------------------------------- | -------------- | ------ | ------------- | ----------------------------------------------- |
-| 01  | [Primitive Types](../01_primitive_types/) | ✅ complete    | 15     | 0             | variables · strings · numbers · type conversion |
-| 02  | [Control Flow](../02_control_flow/)       | ✅ complete    | 13     | 2             | conditionals · loops · logical operators        |
-| 03  | [Functions](../03_functions/)             | ✅ complete    | 12     | 2             | defining · arguments · scope · debugging        |
-| 04  | [Data Structures](../04_data_structures/) | ✅ complete    | 23     | 3             | lists · dicts · sets · comprehensions           |
-| 05  | [Exceptions](../05_exceptions/)           | —              | 7      | 1             | try/except · custom exceptions                  |
-| 06  | [Classes & OOP](../06_classes/)           | —              | 22     | 3             | classes · inheritance · polymorphism            |
-| 07  | [Modules](../07_modules/)                 | —              | 8      | 2             | imports · packages · scripts                    |
-| 08  | [Standard Library](../08_stdlib/)         | —              | 17     | 4             | pathlib · json · datetime · sqlite              |
-| 09  | [Package Management](../09_packaging/)    | —              | 10     | 2             | pip · venv · publishing                         |
-| 10  | [Popular Packages](../10_packages/)       | —              | 12     | 3             | requests · numpy · automation                   |
-| 11  | [Web APIs](../11_web_apis/)               | —              | 8      | 2             | FastAPI · CRUD · databases                      |
-| 12  | [Showcase Webapp](../12_webapp/)          | —              | —      | 1             | Integration of all mini-projects                |
+| #   | Section                                   | Status      | Drills | Mini-Projects | Key Concepts                                    |
+| --- | ----------------------------------------- | ----------- | ------ | ------------- | ----------------------------------------------- |
+| 01  | [Primitive Types](../01_primitive_types/) | ✅ complete | 15     | 0             | variables · strings · numbers · type conversion |
+| 02  | [Control Flow](../02_control_flow/)       | ✅ complete | 13     | 2             | conditionals · loops · logical operators        |
+| 03  | [Functions](../03_functions/)             | ✅ complete | 12     | 2             | defining · arguments · scope · debugging        |
+| 04  | [Data Structures](../04_data_structures/) | ✅ complete | 23     | 3             | lists · dicts · sets · comprehensions           |
+| 05  | [Exceptions](../05_exceptions/)           | —           | 7      | 1             | try/except · custom exceptions                  |
+| 06  | [Classes & OOP](../06_classes/)           | —           | 22     | 3             | classes · inheritance · polymorphism            |
+| 07  | [Modules](../07_modules/)                 | —           | 8      | 2             | imports · packages · scripts                    |
+| 08  | [Standard Library](../08_stdlib/)         | —           | 17     | 4             | pathlib · json · datetime · sqlite              |
+| 09  | [Package Management](../09_packaging/)    | —           | 10     | 2             | pip · venv · publishing                         |
+| 10  | [Popular Packages](../10_packages/)       | —           | 12     | 3             | requests · numpy · automation                   |
+| 11  | [Web APIs](../11_web_apis/)               | —           | 8      | 2             | FastAPI · CRUD · databases                      |
+| 12  | [Showcase Webapp](../12_webapp/)          | —           | —      | 1             | Integration of all mini-projects                |
 
 **Total**: ~147 micro-drills + 25 mini-projects → **1 comprehensive webapp**
 

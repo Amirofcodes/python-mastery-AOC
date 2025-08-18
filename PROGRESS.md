@@ -10,8 +10,8 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 2025‑01‑XX        | 02_Control_Flow    | All 13 drills completed | ✅     | —           |
 | 2025‑01‑XX        | 03_Functions       | Drills 1‑12 completed   | ✅     | —           |
 | 2025‑01‑XX        | 02_Control_Flow    | Number Guessing v1      | ✅     | 611d415     |
-|| 2025‑01‑XX        | 04_Data_Structures | All 23 drills completed | ✅     | —           |
-|| 2025‑01‑XX        | 04_Data_Structures | To‑Do List Manager v1   | ✅     | —           |
+| 2025‑01‑XX        | 04_Data_Structures | All 23 drills completed | ✅     | —           |
+| 2025‑01‑XX        | 04_Data_Structures | To‑Do List Manager v1   | ✅     | —           |
 
 ## 📊 **Overall Progress**
 
