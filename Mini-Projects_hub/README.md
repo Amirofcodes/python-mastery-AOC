@@ -72,10 +72,10 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Handles invalid menu/direction choices
-- [ ] Uses f‑strings with 2–3 decimals
-- [ ] Tracks and prints conversions this session
-- [ ] No functions or collections used
+- [x] Handles invalid menu/direction choices
+- [x] Uses f‑strings with 2–3 decimals
+- [x] Tracks and prints conversions this session
+- [x] No functions or collections used
 
 **Metadata**
 
@@ -117,10 +117,10 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Max 6 valid attempts enforced
-- [ ] Hints printed after each wrong guess
-- [ ] Uses `while` with counter
-- [ ] `while‑else` used for Game Over
+- [x] Max 6 valid attempts enforced
+- [x] Hints printed after each wrong guess
+- [x] Uses `while` with counter
+- [x] `while‑else` used for Game Over
 
 **Metadata**
 
@@ -162,10 +162,10 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Conversion math in pure functions
-- [ ] I/O handled by helpers
-- [ ] No global mutable state
-- [ ] UX same as v1
+- [x] Conversion math in pure functions
+- [x] I/O handled by helpers
+- [x] No global mutable state
+- [x] UX same as v1
 
 **Metadata**
 
@@ -192,9 +192,9 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Math functions are pure
-- [ ] Division handles zero safely
-- [ ] Clean separation between I/O and logic
+- [x] Math functions are pure
+- [x] Division handles zero safely
+- [x] Clean separation between I/O and logic
 
 **Metadata**
 
@@ -221,9 +221,9 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Generation respects length
-- [ ] Validation checks categories
-- [ ] CLI loop with Quit
+- [x] Generation respects length
+- [x] Validation checks categories
+- [x] CLI loop with Quit
 
 **Metadata**
 
@@ -266,9 +266,9 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Unique incremental ids
-- [ ] Toggle works by id
-- [ ] List view consistent and clear
+- [x] Unique incremental ids
+- [x] Toggle works by id
+- [x] List view consistent and clear
 
 **Metadata**
 
@@ -302,9 +302,9 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Stats computed correctly
-- [ ] Honors via comprehension
-- [ ] Sorted with `key=lambda`
+- [x] Stats computed correctly
+- [x] Honors via comprehension
+- [x] Sorted with `key=lambda`
 
 **Metadata**
 

@@ -30,7 +30,7 @@ A comprehensive, progressive learning path for Python mastery. Each section buil
 
 **Total**: ~147 micro-drills + 25 mini-projects → **1 comprehensive webapp**
 
-**Progress**: 63/147 drills (43%) • 5/25 mini-projects (20%)
+**Progress**: 63/147 drills (43%) • 6/25 mini-projects (24%)
 
 ---
 
@@ -101,5 +101,3 @@ Before moving to the next section:
 4. Commit changes with your code
 
 ---
-
-**🎉 Control Flow Complete! Ready for Functions! ⚙️**

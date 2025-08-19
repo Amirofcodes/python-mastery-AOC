@@ -4,14 +4,15 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🧠 **Current Focus: 04_Data_Structures**
 
-| Date (YYYY‑MM‑DD) | Section            | Item                    | Status | Commit Hash |
-| ----------------- | ------------------ | ----------------------- | ------ | ----------- |
-| 2025‑01‑XX        | 01_Primitive_Types | All 15 drills completed | ✅     | —           |
-| 2025‑01‑XX        | 02_Control_Flow    | All 13 drills completed | ✅     | —           |
-| 2025‑01‑XX        | 03_Functions       | Drills 1‑12 completed   | ✅     | —           |
-| 2025‑01‑XX        | 02_Control_Flow    | Number Guessing v1      | ✅     | 611d415     |
-| 2025‑01‑XX        | 04_Data_Structures | All 23 drills completed | ✅     | —           |
-| 2025‑01‑XX        | 04_Data_Structures | To‑Do List Manager v1   | ✅     | —           |
+| Date (YYYY‑MM‑DD) | Section            | Item                       | Status | Commit Hash |
+| ----------------- | ------------------ | -------------------------- | ------ | ----------- |
+| 2025‑01‑XX        | 01_Primitive_Types | All 15 drills completed    | ✅     | —           |
+| 2025‑01‑XX        | 02_Control_Flow    | All 13 drills completed    | ✅     | —           |
+| 2025‑01‑XX        | 03_Functions       | Drills 1‑12 completed      | ✅     | —           |
+| 2025‑01‑XX        | 02_Control_Flow    | Number Guessing v1         | ✅     | 611d415     |
+| 2025‑01‑XX        | 04_Data_Structures | All 23 drills completed    | ✅     | —           |
+| 2025‑01‑XX        | 04_Data_Structures | To‑Do List Manager v1      | ✅     | —           |
+| 2025‑01‑XX        | 04_Data_Structures | Student Grades Analyzer v1 | ✅     | —           |
 
 ## 📊 **Overall Progress**
 
@@ -20,7 +21,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 01_Primitive_Types    | 15/15  | 0/0           | ✅     |
 | 02_Control_Flow       | 13/13  | 2/2           | ✅     |
 | 03_Functions          | 12/12  | 2/2           | ✅     |
-| 04_Data_Structures    | 23/23  | 1/3           | ✅     |
+| 04_Data_Structures    | 23/23  | 2/3           | ✅     |
 | 05_Exceptions         | 0/7    | 0/1           | —      |
 | 06_Classes_OOP        | 0/22   | 0/3           | —      |
 | 07_Modules            | 0/8    | 0/2           | —      |
@@ -30,7 +31,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 63/147 drills (43%) • 5/25 mini-projects (20%)
+**Total Progress**: 63/147 drills (43%) • 6/25 mini-projects (24%)
 
 ---
 
@@ -69,9 +70,9 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Start Exceptions section (7 drills + error handling refactors)
-**Next**: Functions mini-projects (Advanced Calculator, Password Toolkit)
-**After That**: Continue with Exceptions section
+**Current Priority**: Complete remaining Data Structures mini-project (Unique Word Counter v1)
+**Next**: Start Exceptions section (7 drills + error handling refactors)
+**After That**: Functions mini-projects (Advanced Calculator, Password Toolkit)
 
 > 💡 **Note**: Mini-projects start from Control Flow section where you can use conditionals and loops!
 
