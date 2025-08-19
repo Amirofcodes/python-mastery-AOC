@@ -24,10 +24,10 @@ def frequency_dict(words):
     """Return a dict {word: count}."""
     # Hint: loop over words; if key not in dict, initialize to 0 then increment.
     # No collections.Counter yet (saving that for later sections).
-    freqs = {}
+    freq = {}
     for word in words:
-        freqs[word] = freqs.get(word, 0) + 1
-    return freqs
+        freq[word] = freq.get(word, 0) + 1
+    return freq
 
 
 def top_n(freqs, n=5):
@@ -36,6 +36,29 @@ def top_n(freqs, n=5):
     return sorted_items[:n]
 
 
-text = "Hello, hello! This this is a 99 t'est. A quick, QUICK test test; isn't it nice?"
+# --- I/O & orchestration (printing only) ---
 
-print(frequency_dict(tokenize(normalize_text(text))))
+def print_report(text, n_top=5):
+    """Normalize, count, and print unique count + top N."""
+    normalized = normalize_text(text)
+    words = tokenize(normalized)
+    uniques = unique_words(words)
+    freqs = frequency_dict(words)
+    top = top_n(freqs, n_top)
+    print(f"Unique words: {len(uniques)}")
+    print(f"Top {n_top} words:")
+    for word, count in top:
+        print(f" {word}: {count}")
+
+
+def main():
+    # For v1: hardcode a sample paragraph (no user input yet).
+    sample = (
+        "Hello, hello! This is a test. A quick, QUICK test; isn't it nice?"
+        " Punctuation—like dashes—and symbols #$% should be removed."
+    )
+    print_report(sample, n_top=5)
+
+
+if __name__ == "__main__":
+    main()

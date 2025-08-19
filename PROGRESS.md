@@ -13,6 +13,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 2025‑01‑XX        | 04_Data_Structures | All 23 drills completed    | ✅     | —           |
 | 2025‑01‑XX        | 04_Data_Structures | To‑Do List Manager v1      | ✅     | —           |
 | 2025‑01‑XX        | 04_Data_Structures | Student Grades Analyzer v1 | ✅     | —           |
+| 2025‑01‑XX        | 04_Data_Structures | Unique Word Counter v1     | ✅     | —           |
 
 ## 📊 **Overall Progress**
 
@@ -21,7 +22,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 01_Primitive_Types    | 15/15  | 0/0           | ✅     |
 | 02_Control_Flow       | 13/13  | 2/2           | ✅     |
 | 03_Functions          | 12/12  | 2/2           | ✅     |
-| 04_Data_Structures    | 23/23  | 2/3           | ✅     |
+| 04_Data_Structures    | 23/23  | 3/3           | ✅     |
 | 05_Exceptions         | 0/7    | 0/1           | —      |
 | 06_Classes_OOP        | 0/22   | 0/3           | —      |
 | 07_Modules            | 0/8    | 0/2           | —      |
@@ -31,7 +32,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 63/147 drills (43%) • 6/25 mini-projects (24%)
+**Total Progress**: 63/147 drills (43%) • 7/25 mini-projects (28%)
 
 ---
 
@@ -62,7 +63,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 ## 🏆 **Milestones**
 
 - [x] **Foundation Complete**: Sections 1-2 (Primitive Types + Control Flow)
-- [ ] **Structure Mastery**: Sections 3-4 (Functions + Data Structures)
+- [x] **Structure Mastery**: Sections 3-4 (Functions + Data Structures)
 - [ ] **Robustness**: Sections 5-6 (Exceptions + Classes)
 - [ ] **Integration**: Sections 7-12 (Modules → Webapp)
 
@@ -70,9 +71,9 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Complete remaining Data Structures mini-project (Unique Word Counter v1)
-**Next**: Start Exceptions section (7 drills + error handling refactors)
-**After That**: Functions mini-projects (Advanced Calculator, Password Toolkit)
+**Current Priority**: Start Exceptions section (7 drills + error handling refactors)
+**Next**: Functions mini-projects (Advanced Calculator, Password Toolkit)
+**After That**: Continue with Classes & OOP section
 
 > 💡 **Note**: Mini-projects start from Control Flow section where you can use conditionals and loops!
 

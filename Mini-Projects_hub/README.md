@@ -338,9 +338,9 @@ mb = gb * 1024
 
 **Acceptance Checklist**
 
-- [ ] Unique words with `set`
-- [ ] Frequency dict built correctly
-- [ ] Top 5 sorted by frequency
+- [x] Unique words with `set`
+- [x] Frequency dict built correctly
+- [x] Top 5 sorted by frequency
 
 **Metadata**
 
