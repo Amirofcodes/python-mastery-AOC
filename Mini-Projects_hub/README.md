@@ -349,10 +349,364 @@ mb = gb * 1024
 
 ---
 
-## Future Sections (placeholders)
+## Section 05 · Exceptions (v2 refactors)
 
-- Exceptions (v3): try/except around inputs and conversions
-- Classes (v4): OOP refactors
+**Goal**: Add robust error handling to existing projects, making them production-ready.
+
+### **Refactoring Strategy**
+
+Before moving to Classes & OOP, upgrade your existing projects with comprehensive exception handling:
+
+### 1) Smart Unit Converter — v2.1 (exceptions)
+
+**Goal:** Add robust error handling to the functions-based converter.
+
+**New Features**
+
+- Handle invalid menu choices gracefully
+- Catch `ValueError` on numeric inputs
+- Validate conversion ranges (no negative temperatures below absolute zero)
+- Add retry loops for invalid inputs
+- Graceful degradation on errors
+
+**Error Handling Patterns**
+
+```python
+def safe_get_number(prompt, min_val=None, max_val=None):
+    while True:
+        try:
+            value = float(input(prompt))
+            if min_val is not None and value < min_val:
+                print(f"Value must be >= {min_val}")
+                continue
+            if max_val is not None and value > max_val:
+                print(f"Value must be <= {max_val}")
+                continue
+            return value
+        except ValueError:
+            print("Please enter a valid number")
+```
+
+**Acceptance Checklist**
+
+- [ ] All numeric inputs protected with try/except
+- [ ] Menu choices validated with retry loops
+- [ ] Range validation for physical constraints
+- [ ] User-friendly error messages
+- [ ] No crashes on invalid input
+
+**Metadata**
+
+- File: `unit_converter_v2.1.py`
+- Difficulty: ★★★
+
+---
+
+### 2) Advanced Calculator — v2 (exceptions)
+
+**Goal:** Bulletproof the calculator with comprehensive error handling.
+
+**New Features**
+
+- Robust input validation for menu and numbers
+- Enhanced division by zero handling
+- Memory operations with error recovery
+- Invalid operation graceful handling
+- Session error logging
+
+**Error Handling Patterns**
+
+```python
+def safe_get_menu_choice():
+    while True:
+        try:
+            choice = int(input("Choose option (1-5): "))
+            if 1 <= choice <= 5:
+                return choice
+            print("Please choose 1-5")
+        except ValueError:
+            print("Please enter a number")
+
+def safe_divide_enhanced(a, b):
+    try:
+        if b == 0:
+            raise ZeroDivisionError("Cannot divide by zero")
+        return a / b, "Success"
+    except ZeroDivisionError as e:
+        return None, str(e)
+    except Exception as e:
+        return None, f"Calculation error: {e}"
+```
+
+**Acceptance Checklist**
+
+- [ ] All inputs protected with validation loops
+- [ ] Enhanced error messages with context
+- [ ] No crashes on any input combination
+- [ ] Graceful recovery from all errors
+- [ ] Optional: Error logging/statistics
+
+**Metadata**
+
+- File: `calculator_v2.py`
+- Difficulty: ★★★
+
+---
+
+### 3) Password Toolkit — v2 (exceptions + file I/O)
+
+**Goal:** Add file operations with robust error handling.
+
+**New Features**
+
+- Save/load password history to file
+- Handle file permission errors
+- Validate password strength with detailed feedback
+- Batch password generation with error recovery
+- Configuration file loading
+
+**Error Handling Patterns**
+
+```python
+def save_password_history(passwords, filename="password_history.txt"):
+    try:
+        with open(filename, "w") as f:
+            for pwd in passwords:
+                f.write(f"{pwd}\n")
+        return True, f"Saved {len(passwords)} passwords"
+    except PermissionError:
+        return False, "Permission denied - cannot write file"
+    except Exception as e:
+        return False, f"Save failed: {e}"
+
+def load_config(filename="config.txt"):
+    config = {"min_length": 8, "require_symbols": True}
+    try:
+        with open(filename, "r") as f:
+            # Parse config file
+            pass
+    except FileNotFoundError:
+        print("Config file not found, using defaults")
+    except Exception as e:
+        print(f"Config load error: {e}, using defaults")
+    return config
+```
+
+**Acceptance Checklist**
+
+- [ ] File I/O operations protected with try/except
+- [ ] Graceful handling of missing files
+- [ ] Permission error handling
+- [ ] Configuration loading with defaults
+- [ ] Batch operations with partial failure recovery
+
+**Metadata**
+
+- File: `password_toolkit_v2.py`
+- Difficulty: ★★★★
+
+---
+
+### 4) To-Do List Manager — v2 (exceptions + persistence)
+
+**Goal:** Add file persistence with comprehensive error handling.
+
+**New Features**
+
+- Save/load tasks to JSON file
+- Handle corrupted data files
+- Backup and recovery mechanisms
+- Import/export functionality
+- Data validation on load
+
+**Error Handling Patterns**
+
+```python
+import json
+
+def save_tasks(tasks, filename="tasks.json"):
+    try:
+        # Create backup first
+        if os.path.exists(filename):
+            shutil.copy(filename, f"{filename}.backup")
+
+        with open(filename, "w") as f:
+            json.dump(tasks, f, indent=2)
+        return True, "Tasks saved successfully"
+    except Exception as e:
+        return False, f"Save failed: {e}"
+
+def load_tasks(filename="tasks.json"):
+    try:
+        with open(filename, "r") as f:
+            tasks = json.load(f)
+        # Validate task structure
+        for task in tasks:
+            if not all(key in task for key in ["id", "title", "done"]):
+                raise ValueError("Invalid task structure")
+        return tasks, "Tasks loaded successfully"
+    except FileNotFoundError:
+        return [], "No saved tasks found, starting fresh"
+    except json.JSONDecodeError:
+        return [], "Tasks file corrupted, starting fresh"
+    except Exception as e:
+        return [], f"Load error: {e}, starting fresh"
+```
+
+**Acceptance Checklist**
+
+- [ ] JSON file operations with error handling
+- [ ] Data validation on load
+- [ ] Backup and recovery mechanisms
+- [ ] Graceful handling of corrupted files
+- [ ] Import/export with format validation
+
+**Metadata**
+
+- File: `todo_manager_v2.py`
+- Difficulty: ★★★★
+
+---
+
+### 5) Student Grades Analyzer — v2 (exceptions + file processing)
+
+**Goal:** Add CSV file processing with robust error handling.
+
+**New Features**
+
+- Read grades from CSV files
+- Handle malformed data gracefully
+- Multiple file format support
+- Data validation and cleaning
+- Export results to files
+
+**Error Handling Patterns**
+
+```python
+def load_grades_from_csv(filename):
+    records = []
+    errors = []
+
+    try:
+        with open(filename, "r") as f:
+            for line_num, line in enumerate(f, 1):
+                try:
+                    name, score_str = line.strip().split(",")
+                    score = float(score_str)
+                    if not (0 <= score <= 100):
+                        errors.append(f"Line {line_num}: Invalid score {score}")
+                        continue
+                    records.append((name.strip(), score))
+                except ValueError as e:
+                    errors.append(f"Line {line_num}: {e}")
+                except Exception as e:
+                    errors.append(f"Line {line_num}: Unexpected error {e}")
+
+    except FileNotFoundError:
+        return [], [f"File {filename} not found"]
+    except Exception as e:
+        return [], [f"File read error: {e}"]
+
+    return records, errors
+```
+
+**Acceptance Checklist**
+
+- [ ] CSV parsing with line-by-line error handling
+- [ ] Data validation and cleaning
+- [ ] Partial success with error reporting
+- [ ] Multiple file format support
+- [ ] Export functionality with error handling
+
+**Metadata**
+
+- File: `grades_analyzer_v2.py`
+- Difficulty: ★★★★
+
+---
+
+### 6) Unique Word Counter — v2 (exceptions + file processing)
+
+**Goal:** Add file processing capabilities with robust error handling.
+
+**New Features**
+
+- Process text from files
+- Handle large files efficiently
+- Multiple encoding support
+- Batch file processing
+- Results export with error recovery
+
+**Error Handling Patterns**
+
+```python
+def process_text_file(filename, encoding='utf-8'):
+    try:
+        with open(filename, 'r', encoding=encoding) as f:
+            content = f.read()
+        return content, None
+    except UnicodeDecodeError:
+        # Try different encodings
+        for enc in ['latin1', 'cp1252', 'ascii']:
+            try:
+                with open(filename, 'r', encoding=enc) as f:
+                    content = f.read()
+                return content, f"Used {enc} encoding"
+            except UnicodeDecodeError:
+                continue
+        return None, "Could not decode file with any encoding"
+    except FileNotFoundError:
+        return None, f"File {filename} not found"
+    except Exception as e:
+        return None, f"Error reading file: {e}"
+```
+
+**Acceptance Checklist**
+
+- [ ] File reading with encoding detection
+- [ ] Large file handling without memory issues
+- [ ] Batch processing with partial failures
+- [ ] Results export with error recovery
+- [ ] Progress reporting for long operations
+
+**Metadata**
+
+- File: `word_counter_v2.py`
+- Difficulty: ★★★★
+
+---
+
+## **🛡️ Exception Handling Best Practices**
+
+### **Core Principles**
+
+1. **Never crash**: Always handle expected errors gracefully
+2. **User-friendly messages**: Clear, actionable error descriptions
+3. **Graceful degradation**: Partial functionality when possible
+4. **Recovery mechanisms**: Retry loops, defaults, backups
+5. **Logging**: Track errors for debugging (optional)
+
+### **Common Patterns**
+
+- Input validation loops with `try/except`
+- File operations with multiple fallback strategies
+- Data validation with detailed error reporting
+- Resource cleanup with `finally` blocks
+- Context managers (`with` statements) for automatic cleanup
+
+### **Testing Strategy**
+
+- Test with invalid inputs of all types
+- Test file operations with missing/corrupted files
+- Test edge cases and boundary conditions
+- Test partial failure scenarios
+- Test recovery mechanisms
+
+---
+
+## Future Sections
+
+- Classes (v3): OOP refactors with inheritance and polymorphism
 - Modules/Stdlib/etc.: packaging, persistence, APIs
 
 ---
