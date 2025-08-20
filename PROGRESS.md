@@ -16,7 +16,8 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 2025‑01‑XX        | 04_Data_Structures | Unique Word Counter v1     | ✅     | —           |
 | 2025‑01‑XX        | 05_Exceptions      | All 7 drills completed     | ✅     | cf8cafc     |
 | 2025‑01‑XX        | 05_Exceptions      | Unit Converter v2.1        | ✅     | d612716     |
-| 2025‑01‑XX        | 05_Exceptions      | Advanced Calculator v2     | ✅     | —           |
+| 2025‑01‑XX        | 05_Exceptions      | Advanced Calculator v2     | ✅     | 731887f     |
+| 2025‑01‑XX        | 05_Exceptions      | Password Toolkit v2        | ✅     | —           |
 
 ## 📊 **Overall Progress**
 
@@ -26,7 +27,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 02_Control_Flow       | 13/13  | 2/2           | ✅     |
 | 03_Functions          | 12/12  | 2/2           | ✅     |
 | 04_Data_Structures    | 23/23  | 3/3           | ✅     |
-| 05_Exceptions         | 7/7    | 2/6           | ⏳     |
+| 05_Exceptions         | 7/7    | 3/6           | ⏳     |
 | 06_Classes_OOP        | 0/22   | 0/3           | —      |
 | 07_Modules            | 0/8    | 0/2           | —      |
 | 08_Standard_Library   | 0/17   | 0/4           | —      |
