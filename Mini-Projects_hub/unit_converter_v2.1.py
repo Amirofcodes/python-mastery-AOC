@@ -2,13 +2,15 @@
 # Scope: primitives, control flow, strings, functions + exceptions
 # Features: Comprehensive error handling, input validation, retry loops
 
-print("*********** Welcome to Smart Converter v2.1 ***********")
-
 # Constants (immutable config at module scope; not modified)
 MILES_PER_KM = 0.621371
 POUNDS_PER_KG = 2.20462
 EUR_TO_USD = 1.08
 MB_PER_GB = 1024
+
+# Physical constraints
+ABSOLUTE_ZERO_C = -273.15
+ABSOLUTE_ZERO_F = -459.67
 
 
 # ---------- Pure conversion functions (math only) ----------
@@ -57,7 +59,19 @@ def safe_get_number(prompt, min_val=None, max_val=None, unit=""):
     """Get a number with validation and retry loop."""
     while True:
         try:
-            value = float(input(prompt))
+            raw = input(prompt)
+            value = float(raw)
+        except ValueError:
+            print("❌ Please enter a valid number")
+            continue
+        except (KeyboardInterrupt, EOFError):
+            print("\n👋 Goodbye!")
+            raise SystemExit(0)
+        else:
+            # Block non-finite numbers (NaN, inf, -inf)
+            if value != value or value in (float("inf"), float("-inf")):
+                print("❌ Please enter a finite number")
+                continue
 
             # Range validation
             if min_val is not None and value < min_val:
@@ -68,11 +82,6 @@ def safe_get_number(prompt, min_val=None, max_val=None, unit=""):
                 continue
 
             return value
-        except ValueError:
-            print("❌ Please enter a valid number")
-        except (KeyboardInterrupt, EOFError):
-            print("\n👋 Goodbye!")
-            exit(0)
 
 
 def safe_get_menu_choice():
@@ -87,7 +96,7 @@ def safe_get_menu_choice():
             print("❌ Please enter a valid number")
         except (KeyboardInterrupt, EOFError):
             print("\n👋 Goodbye!")
-            exit(0)
+            raise SystemExit(0)
 
 
 def safe_get_direction(opt1_label, opt2_label):
@@ -97,14 +106,14 @@ def safe_get_direction(opt1_label, opt2_label):
             print(f"\n1) {opt1_label}")
             print(f"2) {opt2_label}")
             direction = int(input("Choose direction (1 or 2): "))
-            if direction in [1, 2]:
+            if direction in (1, 2):
                 return direction
             print("❌ Please choose 1 or 2")
         except ValueError:
             print("❌ Please enter 1 or 2")
-        except KeyboardInterrupt:
+        except (KeyboardInterrupt, EOFError):
             print("\n👋 Goodbye!")
-            exit(0)
+            raise SystemExit(0)
 
 
 # ---------- I/O helpers (no business logic) ----------
@@ -124,17 +133,19 @@ def display_menu():
 
 
 def format_result(value_in, value_out, in_label, out_label, decimals=3):
-    # keep formatting simple; temp uses 2 decimals via caller
-    return f"{value_in} {in_label} = {value_out:.{decimals}f} {out_label}"
+    """Format conversion result with consistent decimal places for both input and output."""
+    return f"{value_in:.{decimals}f} {in_label} = {value_out:.{decimals}f} {out_label}"
 
 
 # ---------- Orchestrator with Robust Error Handling ----------
 def run_converter():
     """Main converter loop with comprehensive exception handling."""
-    conversion_count = 0
-
+    # Welcome banner (moved here for import safety)
+    print("*********** Welcome to Smart Converter v2.1 ***********")
     print("🛡️ All inputs are now protected with error handling!")
     print("Try entering invalid values - the program won't crash! 🚀")
+
+    conversion_count = 0
 
     while True:
         try:
@@ -166,16 +177,14 @@ def run_converter():
             elif choice == 2:  # Temperature conversion
                 direction = safe_get_direction("°C → °F", "°F → °C")
                 if direction == 1:
-                    # Absolute zero is -273.15°C
                     c = safe_get_number(
-                        "Enter temperature in °C: ", min_val=-273.15, unit="°C")
+                        "Enter temperature in °C: ", min_val=ABSOLUTE_ZERO_C, unit="°C")
                     f = c_to_f(c)
                     result_msg = format_result(c, f, "°C", "°F", decimals=2)
                     converted = True
                 elif direction == 2:
-                    # Absolute zero is -459.67°F
                     f = safe_get_number(
-                        "Enter temperature in °F: ", min_val=-459.67, unit="°F")
+                        "Enter temperature in °F: ", min_val=ABSOLUTE_ZERO_F, unit="°F")
                     c = f_to_c(f)
                     result_msg = format_result(f, c, "°F", "°C", decimals=2)
                     converted = True
@@ -234,9 +243,10 @@ def run_converter():
                 print(f"📊 Conversions performed: {conversion_count}")
 
         except Exception as e:
-            # Catch any unexpected errors
-            print(f"❌ Unexpected error: {e}")
-            print("🔄 Returning to main menu...")
+            # Catch any unexpected errors (shouldn't happen with proper input validation)
+            print("❌ Unexpected error. Returning to main menu...")
+            print("🔄 Please try again or contact support if this persists.")
+            # For debugging: print(f"(debug) {e!r}")
             continue
 
 
