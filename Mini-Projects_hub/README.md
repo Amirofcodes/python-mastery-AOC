@@ -555,11 +555,11 @@ def load_tasks(filename="tasks.json"):
 
 **Acceptance Checklist**
 
-- [ ] JSON file operations with error handling
-- [ ] Data validation on load
-- [ ] Backup and recovery mechanisms
-- [ ] Graceful handling of corrupted files
-- [ ] Import/export with format validation
+- [x] JSON file operations with error handling
+- [x] Data validation on load
+- [x] Backup and recovery mechanisms
+- [x] Graceful handling of corrupted files
+- [x] Import/export with format validation
 
 **Metadata**
 
