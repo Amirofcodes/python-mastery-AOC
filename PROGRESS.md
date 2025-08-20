@@ -18,7 +18,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 2025‑01‑XX        | 05_Exceptions      | Unit Converter v2.1        | ✅     | d612716     |
 | 2025‑01‑XX        | 05_Exceptions      | Advanced Calculator v2     | ✅     | 731887f     |
 | 2025‑01‑XX        | 05_Exceptions      | Password Toolkit v2        | ✅     | 4790b69     |
-| 2025‑01‑XX        | 05_Exceptions      | To‑Do Manager v2           | ✅     | —           |
+| 2025‑01‑XX        | 05_Exceptions      | To‑Do Manager v2           | ✅     | 30ca6c8     |
 
 ## 📊 **Overall Progress**
 
