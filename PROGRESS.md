@@ -2,7 +2,7 @@
 
 Log every finished drill, mini‑project, or section checkpoint here. Watching this table grow is part of the motivation!
 
-## 🧠 **Current Focus: 04_Data_Structures**
+## 🧠 **Current Focus: 05_Exceptions (Refactoring Phase)**
 
 | Date (YYYY‑MM‑DD) | Section            | Item                       | Status | Commit Hash |
 | ----------------- | ------------------ | -------------------------- | ------ | ----------- |
@@ -14,6 +14,9 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 2025‑01‑XX        | 04_Data_Structures | To‑Do List Manager v1      | ✅     | —           |
 | 2025‑01‑XX        | 04_Data_Structures | Student Grades Analyzer v1 | ✅     | —           |
 | 2025‑01‑XX        | 04_Data_Structures | Unique Word Counter v1     | ✅     | —           |
+| 2025‑01‑XX        | 05_Exceptions      | All 7 drills completed     | ✅     | cf8cafc     |
+| 2025‑01‑XX        | 05_Exceptions      | Unit Converter v2.1        | ✅     | d612716     |
+| 2025‑01‑XX        | 05_Exceptions      | Advanced Calculator v2     | ✅     | —           |
 
 ## 📊 **Overall Progress**
 
@@ -23,7 +26,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 02_Control_Flow       | 13/13  | 2/2           | ✅     |
 | 03_Functions          | 12/12  | 2/2           | ✅     |
 | 04_Data_Structures    | 23/23  | 3/3           | ✅     |
-| 05_Exceptions         | 0/7    | 0/1           | —      |
+| 05_Exceptions         | 7/7    | 2/6           | ⏳     |
 | 06_Classes_OOP        | 0/22   | 0/3           | —      |
 | 07_Modules            | 0/8    | 0/2           | —      |
 | 08_Standard_Library   | 0/17   | 0/4           | —      |
@@ -64,16 +67,17 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 - [x] **Foundation Complete**: Sections 1-2 (Primitive Types + Control Flow)
 - [x] **Structure Mastery**: Sections 3-4 (Functions + Data Structures)
-- [ ] **Robustness**: Sections 5-6 (Exceptions + Classes)
+- [x] **Robustness**: Section 5 (Exceptions) ← **JUST COMPLETED!**
+- [ ] **Object-Oriented**: Section 6 (Classes & OOP)
 - [ ] **Integration**: Sections 7-12 (Modules → Webapp)
 
 ---
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Start Exceptions section (7 drills + error handling refactors)
-**Next**: Functions mini-projects (Advanced Calculator, Password Toolkit)
-**After That**: Continue with Classes & OOP section
+**Current Priority**: Continue Exception refactors (5 remaining projects)
+**Next**: Classes & OOP section (object-oriented programming)
+**After That**: Advanced projects (Modules, File I/O, Web Development)
 
 > 💡 **Note**: Mini-projects start from Control Flow section where you can use conditionals and loops!
 

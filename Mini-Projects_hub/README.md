@@ -389,11 +389,11 @@ def safe_get_number(prompt, min_val=None, max_val=None):
 
 **Acceptance Checklist**
 
-- [ ] All numeric inputs protected with try/except
-- [ ] Menu choices validated with retry loops
-- [ ] Range validation for physical constraints
-- [ ] User-friendly error messages
-- [ ] No crashes on invalid input
+- [x] All numeric inputs protected with try/except
+- [x] Menu choices validated with retry loops
+- [x] Range validation for physical constraints
+- [x] User-friendly error messages
+- [x] No crashes on invalid input
 
 **Metadata**
 
@@ -440,11 +440,11 @@ def safe_divide_enhanced(a, b):
 
 **Acceptance Checklist**
 
-- [ ] All inputs protected with validation loops
-- [ ] Enhanced error messages with context
-- [ ] No crashes on any input combination
-- [ ] Graceful recovery from all errors
-- [ ] Optional: Error logging/statistics
+- [x] All inputs protected with validation loops
+- [x] Enhanced error messages with context
+- [x] No crashes on any input combination
+- [x] Graceful recovery from all errors
+- [x] Optional: Error logging/statistics
 
 **Metadata**
 
