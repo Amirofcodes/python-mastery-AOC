@@ -2,7 +2,7 @@
 
 Log every finished drill, mini‑project, or section checkpoint here. Watching this table grow is part of the motivation!
 
-## 🧠 **Current Focus: 05_Exceptions (Refactoring Phase)**
+## 🧠 **Current Focus: 06_Classes_OOP (Object-Oriented Programming)**
 
 | Date (YYYY‑MM‑DD) | Section            | Item                       | Status | Commit Hash |
 | ----------------- | ------------------ | -------------------------- | ------ | ----------- |
@@ -28,7 +28,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 02_Control_Flow       | 13/13  | 2/2           | ✅     |
 | 03_Functions          | 12/12  | 2/2           | ✅     |
 | 04_Data_Structures    | 23/23  | 3/3           | ✅     |
-| 05_Exceptions         | 7/7    | 4/6           | ⏳     |
+| 05_Exceptions         | 7/7    | 4/6           | ✅     |
 | 06_Classes_OOP        | 0/22   | 0/3           | —      |
 | 07_Modules            | 0/8    | 0/2           | —      |
 | 08_Standard_Library   | 0/17   | 0/4           | —      |
@@ -37,7 +37,7 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 | 11_Web_APIs           | 0/8    | 0/2           | —      |
 | 12_Showcase_Webapp    | 0/0    | 0/1           | —      |
 
-**Total Progress**: 63/147 drills (43%) • 7/25 mini-projects (28%)
+**Total Progress**: 63/147 drills (43%) • 11/25 mini-projects (44%)
 
 ---
 
@@ -69,17 +69,19 @@ Log every finished drill, mini‑project, or section checkpoint here. Watching t
 
 - [x] **Foundation Complete**: Sections 1-2 (Primitive Types + Control Flow)
 - [x] **Structure Mastery**: Sections 3-4 (Functions + Data Structures)
-- [x] **Robustness**: Section 5 (Exceptions) ← **JUST COMPLETED!**
-- [ ] **Object-Oriented**: Section 6 (Classes & OOP)
+- [x] **Robustness**: Section 5 (Exceptions) ← **COMPLETED!**
+- [ ] **Object-Oriented**: Section 6 (Classes & OOP) ← **CURRENT FOCUS!**
 - [ ] **Integration**: Sections 7-12 (Modules → Webapp)
 
 ---
 
 ## 🎯 **Next Steps**
 
-**Current Priority**: Continue Exception refactors (2 remaining projects)
-**Next**: Classes & OOP section (object-oriented programming)
-**After That**: Advanced projects (Modules, File I/O, Web Development)
+**Current Priority**: Master Classes & OOP (22 drills + 3 mini-projects)
+**Next**: Modules section (code organization and packaging)
+**After That**: Advanced projects (Standard Library, Web APIs, Final Webapp)
+
+**Note**: Exception refactors for Grades Analyzer v2 and Word Counter v2 are deferred and can be completed later.
 
 > 💡 **Note**: Mini-projects start from Control Flow section where you can use conditionals and loops!
 

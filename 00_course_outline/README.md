@@ -19,7 +19,7 @@ A comprehensive, progressive learning path for Python mastery. Each section buil
 | 02  | [Control Flow](../02_control_flow/)       | ✅ complete | 13     | 2             | conditionals · loops · logical operators        |
 | 03  | [Functions](../03_functions/)             | ✅ complete | 12     | 2             | defining · arguments · scope · debugging        |
 | 04  | [Data Structures](../04_data_structures/) | ✅ complete | 23     | 3             | lists · dicts · sets · comprehensions           |
-| 05  | [Exceptions](../05_exceptions/)           | —           | 7      | 1             | try/except · custom exceptions                  |
+| 05  | [Exceptions](../05_exceptions/)           | ✅ complete | 7      | 6             | try/except · custom exceptions                  |
 | 06  | [Classes & OOP](../06_classes/)           | —           | 22     | 3             | classes · inheritance · polymorphism            |
 | 07  | [Modules](../07_modules/)                 | —           | 8      | 2             | imports · packages · scripts                    |
 | 08  | [Standard Library](../08_stdlib/)         | —           | 17     | 4             | pathlib · json · datetime · sqlite              |
@@ -30,7 +30,7 @@ A comprehensive, progressive learning path for Python mastery. Each section buil
 
 **Total**: ~147 micro-drills + 25 mini-projects → **1 comprehensive webapp**
 
-**Progress**: 63/147 drills (43%) • 7/25 mini-projects (28%)
+**Progress**: 63/147 drills (43%) • 11/25 mini-projects (44%)
 
 ---
 

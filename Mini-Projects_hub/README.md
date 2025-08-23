@@ -704,10 +704,36 @@ def process_text_file(filename, encoding='utf-8'):
 
 ---
 
-## Future Sections
+## Current Status & Next Steps
+
+### ✅ **Section 05 · Exceptions - COMPLETED**
+
+Successfully refactored 4 out of 6 mini-projects with enterprise-grade exception handling:
+
+- ✅ Unit Converter v2.1 - Production-ready with bulletproof validation
+- ✅ Advanced Calculator v2.0 - Enterprise memory operations & error logging
+- ✅ Password Toolkit v2.0 - File I/O with configuration management
+- ✅ To-Do Manager v2.0 - Database-grade persistence & recovery
+
+### 🔄 **Deferred Exception Refactors**
+
+These projects are complete in v1 and can be upgraded later:
+
+- 📋 Student Grades Analyzer v2 (exceptions + CSV processing)
+- 📋 Unique Word Counter v2 (exceptions + file processing)
+
+### 🎯 **Next: Section 06 · Classes & OOP**
+
+Ready to master object-oriented programming with:
+
+- 22 comprehensive drills covering all OOP concepts
+- 3 mini-projects using classes, inheritance, and polymorphism
+- Professional software architecture patterns
+
+### 🚀 **Future Sections**
 
 - Classes (v3): OOP refactors with inheritance and polymorphism
-- Modules/Stdlib/etc.: packaging, persistence, APIs
+- Modules/Stdlib/etc.: packaging, persistence, APIs, web development
 
 ---
 
