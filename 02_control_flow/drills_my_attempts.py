@@ -13,8 +13,9 @@
 # - Print "Senior" if age is greater than 50
 # - Otherwise, print "Child"
 
-import time
-import random
+# NOTE: Imports removed - not covered in sections 01-02 yet
+# import time    # Will be introduced in later section
+# import random  # Will be introduced in later section
 user_age = int(input("Enter your age: "))
 
 if 13 <= user_age < 18:
@@ -89,7 +90,7 @@ else:
 
 # Drill 7.1: Standard approach
 # Prompt: Same as Drill 7, but after each guess, print a hint ("Too high" or "Too low") to guide the user.
-target = random.randint(1, 10)  # Random number 1-10
+target = 7  # Fixed number for now (random module not introduced yet)
 attempts = 0
 
 print("Guess the number (1-10):")
@@ -210,6 +211,6 @@ for x in range(1, 101):
 
 for x in range(10, -1, -1):
     print(x)
-    time.sleep(1)  # Pause for 1 second
+    # time.sleep(1)  # Pause removed - time module not introduced yet
 else:
     print("Blast off!")
