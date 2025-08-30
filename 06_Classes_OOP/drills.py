@@ -1,8 +1,6 @@
 """
-06_CLASSES — DRILLS (22) — SKELETON ONLY
+06_CLASSES — DRILLS (22)
 
-You asked for *guidance without answers*. This file gives you structured,
-progressive drills that match `notes_6.md`, **without solutions**.
 
 How to use:
 1) Do drills in order. Each drill says exactly what to build and what to return.
