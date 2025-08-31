@@ -2,14 +2,68 @@
 
 Centralized specification for all mini‑projects across sections. Each project evolves across versions (v1, v2, v3) as you unlock new concepts. This hub is your project roadmap.
 
+> **🎯 New Template System**: Each project now includes a comprehensive `project_name_template.py` file following our systematic "ALL the different ways" methodology. Copy templates to start fresh practice with clear instructions and TODO markers.
+
 ---
 
-## Rules
+## 📋 **Universal Project Rules**
 
-- Build progressively: each project version uses only concepts covered so far (no forward refs).
-- Versioning: v1 after Control Flow, v2 after Functions, v3 after Data Structures, etc.
-- Keep projects in this folder. Name files with version suffixes, e.g., `unit_converter_v1.py`.
-- Separate logic from I/O as soon as functions are available.
+- **Progressive Learning**: Each project version uses only concepts covered so far (zero forward references)
+- **Template-First Approach**: Copy `project_name_template.py` to `project_name_v1.py` to start fresh practice
+- **Systematic Versioning**: v1 (basic) → v2 (functions/exceptions) → v3 (classes) → v4+ (advanced)
+- **Professional Standards**: All projects teach industry-grade patterns and error handling
+- **Comprehensive Documentation**: Each template includes detailed instructions, concept labels, and debugging tips
+
+## 🎓 **Learning Methodology**
+
+### **Template Structure**
+
+- **Clear Instructions**: Step-by-step implementation guidance
+- **Concept Labels**: Each section tagged with core learning concepts
+- **TODO Markers**: Systematic completion checkpoints
+- **Testing Checklists**: Comprehensive validation criteria
+- **Enhancement Roadmap**: Clear progression to advanced versions
+
+### **File Organization**
+
+- `project_name_template.py` - Clean template for fresh practice
+- `project_name_v1.py` - Your implementation (copy from template)
+- `project_name_v2.py` - Enhanced version with functions/exceptions
+- `project_name_my_solution.py` - Your completed reference version
+- `test_project_name_vX.py` - Comprehensive testing suite
+
+---
+
+## 🚀 **Available Project Templates**
+
+### **📊 Template Overview**
+
+| Project              | Template File                  | Concepts                              | Difficulty | Status     |
+| -------------------- | ------------------------------ | ------------------------------------- | ---------- | ---------- |
+| **Unit Converter**   | `unit_converter_template.py`   | Menus, loops, conditionals            | ★★☆        | ✅ Ready   |
+| **Calculator**       | `calculator_template.py`       | Functions, pure logic, I/O separation | ★★★        | ✅ Ready   |
+| **Password Toolkit** | `password_toolkit_template.py` | Strings, random, validation           | ★★★        | ✅ Ready   |
+| **Todo Manager**     | `todo_manager_template.py`     | Lists, dicts, CRUD operations         | ★★★        | ✅ Ready   |
+| **Number Guessing**  | `number_guessing_template.py`  | Game logic, state management          | ★★☆        | 📋 Planned |
+| **Grades Analyzer**  | `grades_analyzer_template.py`  | Tuples, statistics, comprehensions    | ★★☆        | 📋 Planned |
+| **Word Counter**     | `word_counter_template.py`     | Sets, dicts, text processing          | ★★★        | 📋 Planned |
+
+### **🎯 How to Use Templates**
+
+1. **Copy Template**: `cp unit_converter_template.py unit_converter_v1.py`
+2. **Follow Instructions**: Read the comprehensive header comments
+3. **Complete TODOs**: Implement each section systematically
+4. **Test Thoroughly**: Use provided testing checklists
+5. **Compare Solutions**: Reference existing `_v1.py` files for guidance
+
+### **💡 Template Features**
+
+- **📝 Comprehensive Instructions**: Step-by-step implementation guidance
+- **🏷️ Concept Labels**: Each TODO tagged with learning concepts
+- **✅ Testing Checklists**: Systematic validation criteria
+- **🛠️ Debugging Tips**: Common pitfalls and troubleshooting advice
+- **🚀 Enhancement Roadmap**: Clear progression to advanced versions
+- **🏭 Real-World Applications**: Professional patterns and use cases
 
 ---
 
