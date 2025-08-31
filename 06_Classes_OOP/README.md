@@ -43,15 +43,16 @@ Master Python’s object model through focused **micro‑drills** that build rea
 | 21  | Decorator preview: count method calls on `Greeter.hello()`.                                        | Decorators (method wrapper preview)          | ☐    |
 | 22  | Integration: `Todo` model using constructor, `repr/str`, equality, `classmethod`, and `@property`. | Putting it all together                      | ☐    |
 
-> All drills are scaffolded in `06_classes/drills.py` with **NotImplemented** placeholders and a test runner that marks unfinished drills as **SKIPPED**.
+> All drills are provided in `drills_template.py` with clear prompts and TODO markers. Copy to `drills.py` to start fresh practice.
 
 ---
 
 ## 2 · How to Use This Section
 
-1. Open `06_classes/notes_6.md` alongside `drills.py`.
-2. Implement one drill at a time. Replace `raise NotImplementedError` with your code.
-3. Run `python 06_classes/drills.py` to execute the built‑in test runner.
+1. Copy `drills_template.py` to `drills.py` to start fresh practice.
+2. Open `notes_6.md` alongside your `drills.py` for reference.
+3. Complete each drill by typing the solution yourself to build muscle memory.
+4. Run `python drills.py` to test your implementations.
 4. Commit progress:
 
    - `feat(06_classes): complete drill 07 - equality semantics`
