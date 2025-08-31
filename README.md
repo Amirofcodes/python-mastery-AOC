@@ -1,13 +1,13 @@
-# 🐍 Python‑Mastery – UV + Docker Starter
+# 🐍 Python‑Mastery – Evolving Learning Repository
 
-Welcome! This repo is **the ultimate learning resource** for mastering Python fundamentals through comprehensive, systematic practice.
+Welcome! This repo is an **actively evolving learning resource** for mastering Python through comprehensive, systematic practice.
 Everything is wired for reproducible dev‑environments **without any tricky setup**:
 
 - **uv** – ultra‑fast package & virtual‑env manager.
 - **Docker + Compose** – optional Linux container that always mirrors your local setup.
-- **6 foundational sections** with **111 systematic drills** covering "ALL the different ways" to use each concept.
-- **7 organized mini-projects** with comprehensive templates and progressive versions.
-- **FastAPI showcase webapp** integrating all your mini-projects for portfolio demonstration.
+- **Growing foundational sections** with **systematic drills** covering "ALL the different ways" to use each concept.
+- **Expanding collection of organized mini-projects** with comprehensive templates and progressive versions.
+- **Portfolio showcase webapp** (Django/FastAPI/other) integrating all your mini-projects for demonstration.
 
 ---
 
@@ -23,33 +23,37 @@ Everything is wired for reproducible dev‑environments **without any tricky set
 
 ---
 
-## 📁 Complete Course Structure
+## 📁 Current Repository Structure
 
 ```
 .
-├── 00_course_outline/          # 📚 Master learning roadmap & philosophy
+├── 00_course_outline/          # 📚 Learning roadmap & philosophy
 ├── 01_primitive_types/         # 🔤 Variables, strings, numbers (22 drills)
 ├── 02_control_flow/           # 🔄 Conditionals, loops (13 drills)
 ├── 03_functions/              # ⚙️  Code organization (12 drills)
 ├── 04_data_structures/        # 📊 Lists, dicts, sets (22 drills)
 ├── 05_exceptions/             # 🛡️  Error handling (20 drills)
 ├── 06_Classes_OOP/            # 🏗️  OOP, inheritance (22 drills)
-├── Mini-Projects_hub/         # 🚀 7 organized project directories
+├── 07_**/                     # 🚧 Future sections (modules, stdlib, etc.)
+├── Mini-Projects_hub/         # 🚀 Growing collection of organized projects
 │   ├── unit_converter/        #   ├── CLI interfaces & menu systems
 │   ├── calculator/            #   ├── Function design & architecture
 │   ├── password_toolkit/      #   ├── Security & string manipulation
 │   ├── todo_manager/          #   ├── Data structures & CRUD
 │   ├── number_guessing/       #   ├── Game logic & state management
 │   ├── grades_analyzer/       #   ├── Data analysis & statistics
-│   └── word_counter/          #   └── Text processing & algorithms
+│   ├── word_counter/          #   └── Text processing & algorithms
+│   └── future_projects/       #   └── 🚧 More projects as learning progresses
 ├── webapp/                    # 🔧 Portfolio showcase development
 ├── Dockerfile + docker-compose.yml
 ├── pyproject.toml             # Single source of deps & tool configs
 ├── REPORT.md                  # 📊 Comprehensive transformation report
-└── PROGRESS.md                # 📈 Your achievement tracker
+└── PROGRESS.md                # 📈 Achievement tracker
 ```
 
-**Total Learning Path**: **111 systematic drills** + **7 comprehensive mini-projects** → **1 professional portfolio webapp**
+**Current Learning Path**: **111+ systematic drills** + **7+ comprehensive mini-projects** → **1 professional portfolio webapp**
+
+> 🚧 **Active Development**: This repository grows as learning progresses. New sections, projects, and concepts are added regularly!
 
 ---
 
@@ -130,9 +134,9 @@ That's it – local & container stay in lock‑step.
 
 ---
 
-## 🌐 **Final Showcase Webapp**
+## 🌐 **Portfolio Showcase Webapp**
 
-Your learning journey culminates in a FastAPI application featuring all 7 organized mini-projects:
+Your learning journey culminates in a professional web application showcasing all your mini-projects:
 
 ```
 🌐 Python Mastery Portfolio
@@ -142,14 +146,23 @@ Your learning journey culminates in a FastAPI application featuring all 7 organi
 ├── 📝 Todo Manager - Task management with persistence
 ├── 🎮 Number Guessing - Interactive game logic
 ├── 📊 Grades Analyzer - Statistical data analysis
-└── 📄 Word Counter - Text processing algorithms
+├── 📄 Word Counter - Text processing algorithms
+└── 🚧 Future Projects - As your skills expand
 ```
 
-**Run the showcase**:
+**Technology Stack**: Flexible choice based on learning progression
+- **FastAPI** - Modern, fast API development
+- **Django** - Full-featured web framework  
+- **Flask** - Lightweight and flexible
+- **Other frameworks** - As you explore and learn
+
+**Run the current showcase**:
 
 ```bash
 docker compose exec dev bash
-uvicorn webapp.main:app --reload --host 0.0.0.0 --port 8000
+# Framework-dependent startup (see webapp/ directory)
+uvicorn webapp.main:app --reload --host 0.0.0.0 --port 8000  # FastAPI
+# python manage.py runserver 0.0.0.0:8000                    # Django
 # Open http://localhost:8000
 ```
 
@@ -168,11 +181,14 @@ uvicorn webapp.main:app --reload --host 0.0.0.0 --port 8000
 
 ## 🎯 **Your Learning Path**
 
-1. **Foundation**: `01_primitive_types/` → `06_Classes_OOP/` - Master core Python systematically
-2. **Template Practice**: Copy `drills_template.py` → complete TODOs → build muscle memory
+1. **Core Foundations**: Start with `01_primitive_types/` through current sections - Master Python systematically
+2. **Template Practice**: Copy `drills_template.py` → complete TODOs → build muscle memory  
 3. **Real Projects**: Explore `Mini-Projects_hub/` → copy templates → build professional applications
 4. **Progressive Versions**: v1 (basic) → v2 (functions) → v2.1+ (production-ready)
-5. **Portfolio Integration**: Combine all mini-projects into comprehensive webapp showcase
+5. **Expand & Grow**: Add new sections and projects as you learn advanced concepts
+6. **Portfolio Integration**: Combine all projects into comprehensive webapp showcase (Django/FastAPI/other)
+
+> 🚧 **Evolving Journey**: This path grows with your learning - add sections, projects, and technologies as you master them!
 
 **Ready to master Python? Fire up your editor and start coding!** 🔥
 
