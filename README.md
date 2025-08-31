@@ -151,8 +151,9 @@ Your learning journey culminates in a professional web application showcasing al
 ```
 
 **Technology Stack**: Flexible choice based on learning progression
+
 - **FastAPI** - Modern, fast API development
-- **Django** - Full-featured web framework  
+- **Django** - Full-featured web framework
 - **Flask** - Lightweight and flexible
 - **Other frameworks** - As you explore and learn
 
@@ -182,7 +183,7 @@ uvicorn webapp.main:app --reload --host 0.0.0.0 --port 8000  # FastAPI
 ## 🎯 **Your Learning Path**
 
 1. **Core Foundations**: Start with `01_primitive_types/` through current sections - Master Python systematically
-2. **Template Practice**: Copy `drills_template.py` → complete TODOs → build muscle memory  
+2. **Template Practice**: Copy `drills_template.py` → complete TODOs → build muscle memory
 3. **Real Projects**: Explore `Mini-Projects_hub/` → copy templates → build professional applications
 4. **Progressive Versions**: v1 (basic) → v2 (functions) → v2.1+ (production-ready)
 5. **Expand & Grow**: Add new sections and projects as you learn advanced concepts
