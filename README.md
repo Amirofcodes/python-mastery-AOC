@@ -78,7 +78,7 @@ Everything is wired for reproducible dev‑environments **without any tricky set
 | Tests              | **pytest**           | simple `assert`‑based testing                 |
 | Container dev‑env  | **Docker + Compose** | mirrors Linux prod in one command             |
 
-All dev‑tools live in **`pyproject.toml`** – no `requirements.txt` clutter.
+All dev‑tools are installed directly with `uv pip install` – no build system needed for a learning repository.
 
 ---
 
@@ -91,7 +91,7 @@ All dev‑tools live in **`pyproject.toml`** – no `requirements.txt` clutter.
 git clone <your-repo>
 cd python-mastery-AOC
 uv venv
-uv pip install -e ".[dev]"
+uv pip install ruff black pytest
 
 # Start with fundamentals (copy template, complete TODOs)
 cd 01_primitive_types/
@@ -120,7 +120,7 @@ python drills.py
 1. **Local** (inside venv) **or** **container** shell:
 
 ```bash
-uv pip add rich            # writes change into pyproject.toml
+uv pip add rich            # installs and adds to pyproject.toml
 ```
 
 2. **Commit** the edited `pyproject.toml`.
@@ -131,6 +131,31 @@ docker compose build dev
 ```
 
 That's it – local & container stay in lock‑step.
+
+---
+
+## 🛠 **Using Development Tools**
+
+Once installed, you can use the tools directly:
+
+```bash
+# Format your code
+.venv/bin/black 01_primitive_types/drills.py
+
+# Lint your code
+.venv/bin/ruff check 01_primitive_types/drills.py
+
+# Run tests
+.venv/bin/pytest -q
+```
+
+**Pro tip**: Add `.venv/bin` to your PATH or use `uv run` for convenience:
+
+```bash
+uv run black 01_primitive_types/drills.py
+uv run ruff check 01_primitive_types/drills.py
+uv run pytest -q
+```
 
 ---
 

@@ -1,17 +1,18 @@
 [project]
-name = "python-mastery"
+name = "python-mastery-learning"
 version = "0.1.0"
-description = "Hands-on notes, drills and mini-projects while following CodeWithMosh – Complete Python Mastery"
-authors = [{ name = "YOUR NAME", email = "you@example.com" }]
+description = "Comprehensive Python learning repository with systematic drills and mini-projects"
+authors = [{ name = "Learning Developer", email = "learning@example.com" }]
 requires-python = ">=3.12"
 
-# ─ Runtime deps (none yet – we’ll add FastAPI, Typer, etc. later)
+# This is a learning repository, not a package to be installed
+# Dependencies are for development tools only
 dependencies = []
 
 [project.optional-dependencies]
 dev = [
   "ruff>=0.4",
-  "black>=24.4",
+  "black>=24.4", 
   "pytest>=8.2",
 ]
 
@@ -25,7 +26,3 @@ line-length = 100
 
 [tool.pytest.ini_options]
 addopts = "-q"
-
-[build-system]
-requires = ["setuptools>=68"]          # lightweight back-end
-build-backend = "setuptools.build_meta"
